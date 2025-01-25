@@ -793,7 +793,7 @@ table {
  * -------------------------------------------------------------------- */
 @media screen and (max-width: 600px) {
     .row {
-        width        : 80%;
+        width        : 95%;
         padding-left : 6vw;
         padding-right: 6vw;
     }
