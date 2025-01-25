@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    <title>Rayan El Idrissi Dafali</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+
+<body id="top">
+
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+                                <text x="50%" y="50%" font-family="'Playfair Display', serif" font-size="28" fill="#FFFFFF" text-anchor="middle" dy=".3em">
+                                    Rayan El Idrissi
+                                </text>
+                            </svg>                                                                                                                             
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <!-- <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li> -->
+                        <li><a class="smoothscroll" href="#about-me">About Me</a></li>
+                        <li><a class="smoothscroll" href="#my-projects">My Projects</a></li>
+                        <li><a class="smoothscroll" href="#teaching">Teaching</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
+
+        <!-- # about
+        ================================================== -->
+        <section id="about" class="s-about target-section">
+            <div class="row s-about__content">
+                <div class="column xl-6 s-about__text-content">
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">About Me.</h2>
+                    </div>                 
+                    <div class="text-content">
+                        <p class="attention-getter">
+                            <i>~ If it isn’t broken, take it apart and find out why ~</i>
+                        </p>
+
+                        <p>
+                            I am a <b>Master’s Research Student</b> at the De Vinci Research Center in Paris, with a keen interest in <b>Data Science</b>, <b>Computer Vision</b>, and <b>Explainable Deep Learning</b>.</p>
+                        <p>
+                            Currently looking for a gap year <b>research internship starting September 2025</b>. Check out my <a href="https://www.linkedin.com/in/rayan-elidrissi" target="_blank"><b>LinkedIn</b></a> or my <a href="https://github.com/rayan-elidrissi" target="_blank"><b>Github</b></a> and feel free to <a href="mailto:rayan.el_idrissi_dafali@edu.devinci.fr"><b>reach out</b></a> if interested!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column xl-6 s-about__image-content">
+                    <img src="images/expo.jpg" alt="Me" class="about-image"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- # my projects
+        ================================================== -->
+        <section id="my-projects" class="s-my-projects target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">My Projects.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row folio-entries">
+
+                <div class="column entry">
+                    <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: White Knit Cap; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/folio/wildfire.png" alt="wildfire">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Live UAVs Wildfire Detection & Monitoring System</h4>
+                            <div class="entry__cat">Computer Vision | Swarm Intelligence</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="column entry">
+                    <a href="images/folio/gallery/mri.png" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
+                        <div class="entry__thumb">
+                            <img src="images/folio/mri.png" srcset="images/folio/mri.png 1x, images/folio/mri@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Explainable Image Classifier for Medical Applications</h4>
+                            <div class="entry__cat">Computer Vision | Deep Learning</div>
+                        </div>
+                    </a>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/globe.png" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
+                        <div class="entry__thumb">
+                            <img src="images/folio/globe.png" srcset="images/folio/globe.png 1x, images/folio/globe@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Caching Placement Optimization in Fog & Edge Computing</h4>
+                            <div class="entry__cat">Networks | Deep Learning</div>
+                        </div>
+                    </a>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/crowd.png" class="entry__link glightbox" data-glightbox="title: Grayscale; description: .entry__desc-04">
+                        <div class="entry__thumb">
+                            <img src="images/folio/crowd.png" srcset="images/folio/crowd.png 1x, images/folio/crowd@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Crowd Counting Discovery</h4>
+                            <div class="entry__cat">Computer Vision | Deep Learning</div>
+                        </div>
+                    </a>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/lhc.png" class="entry__link glightbox" data-glightbox="title: The Lamp; description: .entry__desc-05">
+                        <div class="entry__thumb">
+                            <img src="images/folio/lhc.png" srcset="images/folio/lhc.png 1x, images/folio/lhc@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Large Hadron Collider Data Explorer</h4>
+                            <div class="entry__cat">Data Mining | Data Vizualisation</div>
+                        </div>
+                    </a>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/pipeline.png" class="entry__link glightbox" data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/folio/pipeline.png" srcset="images/folio/pipeline.png 1x, images/folio/pipeline@2x.png 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Data Pre-Processing Pipeline</h4>
+                            <div class="entry__cat">Data Integration | ETL</div>
+                        </div>
+                    </a>
+                </div> <!-- entry --> 
+
+            </div> <!-- folio entries -->
+
+        </section> <!-- end s-works --> 
+
+        <section id="teaching" class="s-teaching target-section">
+            <div class="row s-about__content">
+                <div class="column xl-12">    
+                    <div class="section-header" data-num="03">
+                        <h2 class="text-display-title">Teaching.</h2>
+                    </div>
+
+                    <p>The following material is primarily intended for my dear undergraduates, french preparatory class students, or high school students who are eager to have fun :)</p>
+                    <p>Some materials may not be available at the moment as I'm still working on them. Let me know if you have any questions or ideas!</p>
+
+                    <div class="grid-list-items s-about__blocks">
+                        <!--
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">General</h4>
+                            <ul class="s-about__list">
+                                <li><a href="path-to-pdf/trigonometry.pdf" target="_blank">Trigonometry</a></li>
+                                <li><a href="path-to-pdf/arithmetic.pdf" target="_blank">Arithmetic</a></li>
+                                <li><a href="path-to-pdf/sets-functions-relations.pdf" target="_blank">Sets, functions, relations</a></li>
+                            </ul>
+                        </div>
+                        -->
+
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Algebra</h4>
+                            <ul class="s-about__list">
+                                <li><a href="path-to-pdf/complex-numbers.pdf" target="_blank">Complex numbers</a></li>
+                                <li><a href="path-to-pdf/linear-systems.pdf" target="_blank">Linear systems</a></li>
+                                <li><a href="path-to-pdf/real-numbers.pdf" target="_blank">Real numbers</a></li>
+                                <li><a href="path-to-pdf/sequences.pdf" target="_blank">Sequences</a></li>
+                                <li><a href="path-to-pdf/matrix-calculation.pdf" target="_blank">Matrix calculation</a></li>
+                                <li><a href="path-to-pdf/groups-rings-fields.pdf" target="_blank">Groups, rings, fields</a></li>
+                                <li><a href="path-to-pdf/polynomials.pdf" target="_blank">Polynomials</a></li>
+                                <li><a href="path-to-pdf/rational-fractions.pdf" target="_blank">Rational fractions</a></li>
+                                <li><a href="path-to-pdf/vector-spaces.pdf" target="_blank">Vector spaces</a></li>
+                                <li><a href="path-to-pdf/finite-dimensional-vector-spaces.pdf" target="_blank">Finite-dimensional vector spaces</a></li>
+                                <li><a href="path-to-pdf/linear-functions.pdf" target="_blank">Linear functions</a></li>
+                                <li><a href="path-to-pdf/matrices-linear-functions.pdf" target="_blank">Matrices and linear functions</a></li>
+                                <li><a href="path-to-pdf/symmetric-group-determinant.pdf" target="_blank">Symmetric group and determinant</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Calculus</h4>
+                            <ul class="s-about__list">
+                                <li><a href="path-to-pdf/limits-continuity-differentiability.pdf" target="_blank">Limits - Continuity - Differentiability</a></li>
+                                <li><a href="path-to-pdf/convex-functions.pdf" target="_blank">Convex functions</a></li>
+                                <li><a href="path-to-pdf/comparison-of-sequences.pdf" target="_blank">Comparison of sequences and functions</a></li>
+                                <li><a href="path-to-pdf/limited-expansions.pdf" target="_blank">Limited expansions</a></li>
+                                <li><a href="path-to-pdf/integral-of-continuous-function.pdf" target="_blank">Integral</a></li>
+                                <li><a href="path-to-pdf/numerical-series.pdf" target="_blank">Numerical series</a></li>
+                                <li><a href="path-to-pdf/summable-families.pdf" target="_blank">Summable families</a></li>
+                                <li><a href="path-to-pdf/real-prehilbert-spaces.pdf" target="_blank">Real pre-Hilbert spaces</a></li>
+                            </ul>
+                        </div>
+                    
+                        <div class="grid-list-items__item s-about__block">
+                            <h4 class="s-about__block-title">Probabilities & Statistics</h4>
+                            <ul class="s-about__list">
+                                <li><a href="path-to-pdf/random-variables.pdf" target="_blank">Random Variables</a></li>
+                                <li><a href="path-to-pdf/expectation-variance.pdf" target="_blank">Expectation & Variance</a></li>
+                                <li><a href="path-to-pdf/probability-distributions.pdf" target="_blank">Probability Distributions</a></li>
+                                <li><a href="path-to-pdf/finite-random-variables.pdf" target="_blank">Joint Probability & Independance</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+        </section>
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row s-footer__content">
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <h5>Contact Me</h5>
+                    <ul class="link-list">
+                        <li>Feel free to send me an email</li>
+                        <li><a href="mailto:rayan.el_idrissi_dafali@edu.devinci.fr">rayan.el_idrissi_dafali@edu.devinci.fr</a></li>
+                    </ul>              
+                </div> <!-- end section-footer__site-links -->
+            </div> <!-- end section-footer__content -->           
+            
+            <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <!-- LinkedIn -->
+                        <li>
+                            <a href="https://www.linkedin.com/in/rayan-elidrissi/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); transform: ; msFilter:;">
+                                    <path d="M19 0h-14c-2.75 0-5 2.25-5 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5v-14c0-2.75-2.25-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.38-.28-2.25-1.97-2.25-1.12 0-1.75.76-2.04 1.5-.06.15-.08.36-.08.57v5.68h-3s.04-9.18 0-10.13h3v1.43c.4-.62 1.11-1.5 2.7-1.5 1.97 0 3.44 1.28 3.44 4.03v6.17z"></path>
+                                </svg>
+                                <span class="u-screen-reader-text">LinkedIn</span>
+                            </a>
+                        </li>
+                        
+
+                        <!-- GitHub -->
+                        <li>
+                            <a href="https://github.com/rayan-elidrissi/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48 0-.24-.01-.86-.01-1.69-2.79.6-3.38-1.34-3.38-1.34-.46-1.17-1.12-1.48-1.12-1.48-.91-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.89 1.53 2.34 1.09 2.91.83.09-.64.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.47 9.47 0 0 1 12 7.4a9.4 9.4 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.91.68 1.83 0 1.32-.01 2.38-.01 2.71 0 .26.17.57.67.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
+                                </svg>
+                                <span class="u-screen-reader-text">GitHub</span>
+                                
+                            </a>
+                        </li>
+
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
+            </div> <!-- end section-footer__bottom -->          
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div> <!-- end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
