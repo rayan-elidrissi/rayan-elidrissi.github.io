@@ -403,12 +403,12 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-    function toggleSection(sectionId) {
-        document.querySelectorAll('.s-about__block').forEach(el => el.classList.add('hidden'));
-        document.getElementById(sectionId).classList.remove('hidden');
-    }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PLRJ5PEMC9');
     </script>
     
 
