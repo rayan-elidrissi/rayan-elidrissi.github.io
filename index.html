@@ -67,12 +67,23 @@
                     <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
                 </div> <!-- end s-header__block -->
 
-                <nav class="s-header__nav">    
+
+                <nav class="s-header__nav">
+                    <!-- Language Toggle 
+                    <div class="toggle">
+                        <input type="checkbox" id="btn">
+                        <label for="btn">
+                            <div class="thumb"></div>
+                        </label>
+                        <div class="light"></div>
+                    </div>
+                    -->
+
                     <ul class="s-header__menu-links">
-                        <!-- <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li> -->
-                        <li><a class="smoothscroll" href="#about-me">About Me</a></li>
-                        <li><a class="smoothscroll" href="#my-projects">My Projects</a></li>
-                        <li><a class="smoothscroll" href="#teaching">Teaching</a></li>
+                        <li class="current"><a class="smoothscroll" href="#intro">About Me</a></li>
+                        <li><a class="smoothscroll" href="#my-projects">What I Build.</a></li>
+                        <li><a class="smoothscroll" href="#teaching">What I Teach.</a></li>
+                        <li><a class="smoothscroll" href="#standfor">What I Stand For.</a></li>
                         <li><a class="smoothscroll" href="#footer">Contact</a></li>
                     </ul> <!-- s-header__menu-links -->    
                 </nav> <!-- end s-header__nav -->
@@ -85,28 +96,32 @@
         <section id="about" class="s-about target-section">
             <div class="row s-about__content">
                 <div class="column xl-6 s-about__text-content">
-                    <div class="section-header" data-num="01">
-                        <h2 class="text-display-title">About Me.</h2>
-                    </div>                 
+                    
+                    
+                    <div class="section-header" data-num="">
+                        <h4 class="text-display-title">~ If it isn’t broken, take it apart and find out why!</h4> 
+                    </div>
+                    
+                    
                     <div class="text-content">
-                        <p class="attention-getter">
-                            <i>~ If it isn’t broken, take it apart and find out why</i>
+                        
+                        <p>
+                            I am a <b>Master Engineering Student</b> at ESILV in Paris majoring in <b>Computer Science</b> and enrolled in <b>Research Track</b>.
+                        </p>
+                        
+                        <p>
+                            My core strengths include a deep sense of <b>curiosity</b>, an eye for <b>detail</b>, <b>empathy</b>, and <b>passion</b> for research and innovation. My interests? Computer Vision, Explainable AI & Distributed Systems.
                         </p>
 
                         <p>
-                            I am a <b>Master’s Research Student</b> at the De Vinci Research Center in Paris, with a keen interest in <b>Computer Vision</b>, <b>Explainable AI</b> and <b>Distributed Systems</b>.</p>
-                        <p>
-                            Currently looking for a gap year <b>research internship starting September 2025</b>. Feel free to connect with me on <a href="https://www.linkedin.com/in/rayan-elidrissi" target="_blank"><b>LinkedIn</b></a> or explore my projects on <a href="https://github.com/rayan-elidrissi" target="_blank"><b>GitHub</b></a>. You can also <a href="mailto:rayan.el_idrissi_dafali@edu.devinci.fr"><b>reach out</b></a> directly if you're interested in collaborating!
+                            I am currently looking for a 5 to 6-month <b>research internship starting April 2025</b>.
                         </p>
 
-                        <p>
-                            My core strengths include a deep sense of <b>curiosity</b>, an eye for <b>detail</b>, <b>empathy</b>, and <b>passion</b> for research and innovation.
-                        </p>
                     </div>
                 </div>
 
                 <div class="column xl-6 s-about__image-content">
-                    <img src="images/expo.jpg" alt="Me" class="about-image"/>
+                    <img src="images/expo.jpg" alt="Me" class="about-image" loading="lazy"/>
                 </div>
             </div>
         </section>
@@ -117,9 +132,9 @@
 
             <div class="row">
                 <div class="column xl-12">
-                    <div class="section-header" data-num="02">
-                        <h2 class="text-display-title">My Projects.</h2>
-                    </div> <!-- end section-header -->
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">What I Build.</h2>
+                    </div>
                 </div>
             </div>
 
@@ -128,7 +143,7 @@
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: White Knit Cap; description: .entry__desc-01">
                         <div class="entry__thumb">
-                            <img src="images/folio/wildfire.png" alt="wildfire">
+                            <img src="images/folio/wildfire.png" alt="wildfire" loading="lazy">
                         </div>
                         <div class="entry__info">
                             <h4 class="entry__title">Live UAVs Wildfire Detection & Monitoring System</h4>
@@ -140,19 +155,19 @@
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
                         <div class="entry__thumb">
-                            <img src="images/folio/mri.png" alt="">
+                            <img src="images/folio/mri.png" alt="mri" loading="lazy">
                         </div>
                         <div class="entry__info">
                             <h4 class="entry__title">Explainable Image Classifier for Medical Applications</h4>
                             <div class="entry__cat">Computer Vision | Deep Learning</div>
                         </div>
                     </a>
-                </div> <!-- entry -->
+                </div>
 
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
                         <div class="entry__thumb">
-                            <img src="images/folio/globe.png" alt="">
+                            <img src="images/folio/globe.png" alt="globe" loading="lazy">
                         </div>
                         <div class="entry__info">
                             <h4 class="entry__title">Caching Placement Optimization in Fog & Edge Computing</h4>
@@ -164,66 +179,76 @@
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: Grayscale; description: .entry__desc-04">
                         <div class="entry__thumb">
-                            <img src="images/folio/crowd.png" alt="">
+                            <img src="images/folio/crowd.png" alt="crowd" loading="lazy">
                         </div>
                         <div class="entry__info">
-                            <h4 class="entry__title">Crowd Counting Discovery</h4>
+                            <h4 class="entry__title">Point Based Crowd Counting & Localization</h4>
                             <div class="entry__cat">Computer Vision | Deep Learning</div>
                         </div>
                     </a>
-                </div> <!-- entry -->
+                </div>
+
+                
+
+    
+                
+                <!--
 
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: The Lamp; description: .entry__desc-05">
                         <div class="entry__thumb">
-                            <img src="images/folio/lhc.png" alt="">
+                            <img src="images/folio/lhc.png" alt="" loading="lazy">
                         </div>
                         <div class="entry__info">
                             <h4 class="entry__title">Large Hadron Collider Data Explorer</h4>
                             <div class="entry__cat">Data Mining | Data Vizualisation</div>
                         </div>
                     </a>
-                </div> <!-- entry -->
-
+                </div>
+                
                 <div class="column entry">
                     <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: Tropical; description: .entry__desc-06">
                         <div class="entry__thumb">
-                            <img src="images/folio/epidemic.png" alt="">
+                            <img src="images/folio/epidemic.png" alt="" loading="lazy">
                         </div>
                         <div class="entry__info">
                             <h4 class="entry__title">Epidemic Propagation through Animal Vector</h4>
                             <div class="entry__cat">Stochastic Modelization | Epidemiology</div>
                         </div>                        
                     </a>
-                </div> <!-- entry --> 
+                </div>
 
-            </div> <!-- folio entries -->
+                -->
 
-        </section> <!-- end s-works --> 
+            </div>
+
+            <div class="project-button">
+                <button class="button-28" onclick="window.location.href='projects.html'">See More Projects</button>
+            </div>
+
+        </section>
 
         <section id="teaching" class="s-teaching target-section">
-            <div class="row s-about__content">
+            <div class="row s-teaching__content">
                 <div class="column xl-12">    
-                    <div class="section-header" data-num="03">
-                        <h2 class="text-display-title">Teaching.</h2>
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">What I Teach.</h2>
                     </div>
-
-                    <p>The following material is primarily intended for my dear undergraduates, french preparatory class students, or high school students who are eager to have fun :)</p>
-                    <p>Some materials may not be available at the moment as I'm still working on them. Let me know if you have any questions or ideas!</p>
-
+        
+                    <p>When I’m not training neural networks, I’m often busy training real students!</p>
+                    <p>Below are some resources for my dear undergraduates majoring in mathematics and students in French preparatory class who are eager to have fun :)</p>
+                    <p>Some materials may not be available at the moment as I'm still working on them. Let me know if you have any questions.</p>
+        
+                    <!-- Buttons to toggle sections -->
+                    <div class="teaching-buttons">
+                        <button class="button-28" onclick="toggleSection('algebra')">Algebra</button>
+                        <button class="button-28" onclick="toggleSection('calculus')">Calculus</button>
+                        <button class="button-28" onclick="toggleSection('probabilities')">Probabilities & Statistics</button>
+                    </div>
+        
                     <div class="grid-list-items s-about__blocks">
-                        <!--
-                        <div class="grid-list-items__item s-about__block">
-                            <h4 class="s-about__block-title">General</h4>
-                            <ul class="s-about__list">
-                                <li><a href="path-to-pdf/trigonometry.pdf" target="_blank">Trigonometry</a></li>
-                                <li><a href="path-to-pdf/arithmetic.pdf" target="_blank">Arithmetic</a></li>
-                                <li><a href="path-to-pdf/sets-functions-relations.pdf" target="_blank">Sets, functions, relations</a></li>
-                            </ul>
-                        </div>
-                        -->
-
-                        <div class="grid-list-items__item s-about__block">
+                        <!-- Algebra Section -->
+                        <div id="algebra" class="grid-list-items__item s-about__block hidden">
                             <h4 class="s-about__block-title">Algebra</h4>
                             <ul class="s-about__list">
                                 <li><a href="path-to-pdf/complex-numbers.pdf" target="_blank">Complex numbers</a></li>
@@ -241,8 +266,9 @@
                                 <li><a href="path-to-pdf/symmetric-group-determinant.pdf" target="_blank">Symmetric group and determinant</a></li>
                             </ul>
                         </div>
-                    
-                        <div class="grid-list-items__item s-about__block">
+        
+                        <!-- Calculus Section -->
+                        <div id="calculus" class="grid-list-items__item s-about__block hidden">
                             <h4 class="s-about__block-title">Calculus</h4>
                             <ul class="s-about__list">
                                 <li><a href="path-to-pdf/limits-continuity-differentiability.pdf" target="_blank">Limits - Continuity - Differentiability</a></li>
@@ -255,17 +281,64 @@
                                 <li><a href="path-to-pdf/real-prehilbert-spaces.pdf" target="_blank">Real pre-Hilbert spaces</a></li>
                             </ul>
                         </div>
-                    
-                        <div class="grid-list-items__item s-about__block">
+        
+                        <!-- Probabilities & Statistics Section -->
+                        <div id="probabilities" class="grid-list-items__item s-about__block hidden">
                             <h4 class="s-about__block-title">Probabilities & Statistics</h4>
                             <ul class="s-about__list">
                                 <li><a href="path-to-pdf/random-variables.pdf" target="_blank">Random Variables</a></li>
                                 <li><a href="path-to-pdf/expectation-variance.pdf" target="_blank">Expectation & Variance</a></li>
                                 <li><a href="path-to-pdf/probability-distributions.pdf" target="_blank">Probability Distributions</a></li>
-                                <li><a href="path-to-pdf/finite-random-variables.pdf" target="_blank">Joint Probability & Independance</a></li>
+                                <li><a href="path-to-pdf/finite-random-variables.pdf" target="_blank">Joint Probability & Independence</a></li>
                             </ul>
                         </div>
-                    </div>                    
+                    </div>
+                </div>                
+            </div>
+        </section>
+        
+
+        <!-- # what I stand for
+        ================================================== -->
+        <section id="standfor" class="s-my-projects target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="03">
+                        <h2 class="text-display-title">What I Stand For.</h2>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row folio-entries">
+
+                <div class="column entry">
+                    <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: White Knit Cap; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/folio/coming.png" alt="coming" loading="lazy">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">COMING</h4>
+                            <div class="entry__cat">coming</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="column entry">
+                    <a href="https://github.com/rayan-elidrissi/" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
+                        <div class="entry__thumb">
+                            <img src="images/folio/coming.png" alt="coming" loading="lazy">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">COMING</h4>
+                            <div class="entry__cat">coming</div>
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+
         </section>
 
         <!-- # footer 
@@ -330,6 +403,14 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    function toggleSection(sectionId) {
+        document.querySelectorAll('.s-about__block').forEach(el => el.classList.add('hidden'));
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+    </script>
+    
 
 </body>
 </html>

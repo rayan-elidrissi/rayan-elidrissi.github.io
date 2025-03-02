@@ -1,8 +1,3 @@
-/* ===================================================================
- * Hudson 1.0.0 - Main JS
- *
- * ------------------------------------------------------------------- */
-
 (function(html) {
 
     'use strict';
@@ -312,3 +307,13 @@
     })();
 
 })(document.documentElement);
+
+function toggleSection(sectionId) {
+    // Hide all sections
+    document.getElementById('algebra').classList.add('hidden');
+    document.getElementById('calculus').classList.add('hidden');
+    document.getElementById('probabilities').classList.add('hidden');
+
+    // Show the clicked section
+    document.getElementById(sectionId).classList.remove('hidden');
+}
