@@ -3011,7 +3011,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .s-header {
-    --header-height : 72px;
+    --header-height : 72px; /* Restored original height */
     --logo-width    : 50rem;
     --width-grid-max: calc(var(--width-sixteen-cols) - calc(var(--gutter) * 2));
     --box-shadow    : 0 1px 1px rgba(0, 0, 0, 0.02),
@@ -3027,7 +3027,7 @@ td:last-child {
     height          : var(--header-height);
     width           : 100%;
     position        : absolute;
-    top             : min(var(--vspace-0_75), 4vh);
+    top             : min(var(--vspace-0_75), 4vh); /* Restored original spacing */
     left            : 0;
 }
 
@@ -3073,20 +3073,26 @@ td:last-child {
     border          : 1px solid rgba(255, 255, 255, 0.03);
     padding         : 0 var(--gutter);
     box-shadow      : var(--box-shadow);
+    max-width       : 70%; /* Reduced from 80% to make the header even narrower */
+    margin          : 0 auto; /* Center the header */
+    border-radius   : 4px; /* Add slight rounding to the corners */
 }
 
 .s-header__block {
-    z-index : 101;
+    z-index: 101;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-/* --------------------------------------------------------------------
- * ## logo
- * -------------------------------------------------------------------- */
 .s-header__logo {
-    z-index    : 3;
+    z-index: 3;
     line-height: 1;
-    transform  : translate(0.2rem, -0.05em);
+    transform: translate(0.2rem, -0.05em);
+    flex: 0 0 auto;
+    max-width: 60%;
 }
 
 .s-header__logo a {
@@ -3095,19 +3101,21 @@ td:last-child {
     padding: 0;
     outline: 0;
     border : none;
+    transform: scale(0.9); /* Added to make the logo slightly smaller */
 }
 
-.s-header__logo img {
-    width         : var(--logo-width);
-    margin        : 0;
-    vertical-align: bottom;
+.s-header__logo svg {
+    height: 60px; /* Restored original height */
+    width: auto;
 }
 
-/* --------------------------------------------------------------------
- * ## main navigation
- * -------------------------------------------------------------------- */
+.s-header__logo svg text {
+    font-size: 28px; /* Restored original font size */
+}
+
 .s-header__nav {
     margin-left: var(--vspace-1);
+    transition: opacity 0.3s ease-in-out;
 }
 
 .s-header__menu-links {
@@ -3123,13 +3131,14 @@ td:last-child {
 }
 
 .s-header__menu-links a {
-    display            : block;
-    font-family        : var(--font-1);
-    font-weight        : 400;
-    font-size          : 1.5rem;
-    line-height        : var(--vspace-1);
-    color              : var(--color-gray-14);
-    padding            : 0 1.2rem;
+    display: block;
+    color: var(--color-white);
+    font-family: var(--font-1);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: var(--vspace-1);
+    color: var(--color-gray-14);
+    padding: 0 1rem; /* Slightly reduced padding for narrower header */
     transition-property: color, background-color;
 }
 
@@ -3137,19 +3146,26 @@ td:last-child {
     color: white;
 }
 
-/* --------------------------------------------------------------------
- * ## mobile menu toggle
- * -------------------------------------------------------------------- */
 .s-header__menu-toggle {
-    --toggle-block-width: 44px;
-    --toggle-line-width : 28px;
+    --toggle-block-width: 44px; /* Restored original size */
+    --toggle-width: 28px; /* Restored original size */
+    --toggle-line-width: 28px; /* Restored original size */
     --toggle-line-height: 1px;
-    display             : none;
-    width               : var(--toggle-block-width);
-    height              : var(--toggle-block-width);
-    position            : absolute;
-    top                 : calc((var(--header-height) - var(--toggle-block-width)) / 2);
-    right               : calc(var(--gutter) * 2 - 0.8rem);
+    display: none;
+    height: var(--toggle-block-width);
+    width: var(--toggle-block-width);
+    line-height: var(--toggle-block-width);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-1);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: var(--color-white);
+    background-color: transparent;
+    z-index: 4;
 }
 
 .s-header__menu-toggle span {
@@ -3850,11 +3866,11 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
-.s-about {
-    padding-top: var(--vspace-7);
+ .s-about {
+    padding-top: 15rem !important;
+    padding-bottom: 1rem !important;
     color      : var(--color-3);
     margin-bottom: 0 !important;
-    padding-bottom: var(--vspace-1) !important; /* Adjust to a smaller value */
 }
 
 /* --------------------------------------------------------------------
@@ -4620,4 +4636,396 @@ td:last-child {
 
 .teaching-buttons .button-28 {
     margin: 0.5rem;
+}
+
+.small-button {
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1rem !important;
+  min-width: 120px !important;
+  height: auto !important;
+}
+
+.project-description {
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-description ul {
+  margin-left: 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-description li {
+  margin-bottom: 0.4rem;
+}
+
+.project-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Category Button Styles */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.active-category {
+  background-color: var(--color-1) !important;
+  color: white !important;
+}
+
+/* Materials Section Styles */
+.materials-section {
+  display: none;
+}
+
+.materials-section.active {
+  display: block;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.material-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.material-icon {
+  color: var(--color-1);
+  margin-bottom: 1rem;
+}
+
+.material-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.material-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.material-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.material-link:hover {
+  background-color: var(--color-1);
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .category-buttons .button-28 {
+    width: 100%;
+  }
+}
+
+/* New vertical line navigation styles */
+.s-header__nav {
+    position: fixed;
+    top: 55%; /* Moved down a bit from 50% */
+    right: 40px;
+    height: 300px; /* Adjust based on number of sections */
+    transform: translateY(-50%); /* Center it perfectly */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* The vertical line */
+.s-header__nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0px; /* Center the line at exactly 0px from right edge */
+    width: 1px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Lower than circles but still visible */
+}
+
+.s-header__menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.s-header__menu-links li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 170px; /* Increased space for larger text */
+    text-align: right;
+}
+
+/* Circle indicator */
+.s-header__menu-links li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -7px; /* Position so that center of circle is at 0px (same as line) */
+    width: 14px; /* Bigger circles */
+    height: 14px; /* Bigger circles */
+    background: #fff !important; /* Ensure white fill with !important */
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transform: translateY(-50%); /* Only center vertically */
+    transition: all 0.2s ease;
+    z-index: 5; /* Make sure circles are above the line */
+}
+
+/* Section name */
+.s-header__menu-links a {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-size: 1.3rem; /* Larger font size */
+    font-weight: 500;
+    padding-right: 30px; /* Increased padding for larger circles */
+    transition: all 0.2s ease;
+}
+
+.s-header__menu-links a:hover {
+    color: #000000;
+}
+
+/* Active section styling - different colors for each section with stronger values */
+/* About section */
+.s-header__menu-links li:nth-child(1).current::after {
+    background-color: red !important;
+    border-color: #000000 !important;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) !important; /* Add subtle glow */
+}
+
+/* What I Build section */
+.s-header__menu-links li:nth-child(2).current::after {
+    background-color: #2196F3 !important; /* Blue for What I Build */
+    border-color: #2196F3 !important;
+    box-shadow: 0 0 3px rgba(33, 150, 243, 0.8) !important; /* Add subtle glow */
+}
+
+/* What I Teach section */
+.s-header__menu-links li:nth-child(3).current::after {
+    background-color: #4CAF50 !important; /* Green for What I Teach */
+    border-color: #4CAF50 !important;
+    box-shadow: 0 0 3px rgba(76, 175, 80, 0.8) !important; /* Add subtle glow */
+}
+
+/* What I Stand For section */
+.s-header__menu-links li:nth-child(4).current::after {
+    background-color: #FFC107 !important; /* Amber for What I Stand For */
+    border-color: #FFC107 !important;
+    box-shadow: 0 0 3px rgba(255, 193, 7, 0.8) !important; /* Add subtle glow */
+}
+
+/* Contact section */
+.s-header__menu-links li:nth-child(5).current::after {
+    background-color: #FF5722 !important; /* Deep Orange for Contact */
+    border-color: #FF5722 !important;
+    box-shadow: 0 0 3px rgba(255, 87, 34, 0.8) !important; /* Add subtle glow */
+}
+
+.s-header__menu-links .current a {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Hide the menu toggle button as it's not needed for the line navigation */
+.s-header__menu-toggle {
+    display: none;
+}
+
+/* Make sure the header doesn't take up space in the layout */
+.s-header {
+    position: absolute;
+    height: 0;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .s-header__nav {
+        right: 20px;
+        height: 250px;
+    }
+    
+    .s-header__menu-links li {
+        width: 140px;
+    }
+    
+    .s-header__menu-links a {
+        font-size: 1.1rem;
+    }
+    
+    .s-header__menu-links li::after {
+        width: 12px;
+        height: 12px;
+        right: -6px; /* Half the width to center on line */
+    }
+    
+    .s-header__menu-links .current::after {
+        width: 16px;
+        height: 16px;
+        right: -8px; /* Half the width to center on line */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .s-header__nav {
+        right: 15px;
+    }
+    
+    .s-header__menu-links li {
+        width: 110px;
+    }
+    
+    .s-header__menu-links a {
+        font-size: 0.95rem;
+    }
+    
+    .s-header__menu-links li::after {
+        width: 10px;
+        height: 10px;
+        right: -5px; /* Half the width to center on line */
+    }
+    
+    .s-header__menu-links .current::after {
+        width: 14px;
+        height: 14px;
+        right: -7px; /* Half the width to center on line */
+    }
+}
+
+/* Active section styling - different colors for each section with stronger values */
+.s-header__menu-links .current::after {
+    width: 18px !important; /* Bigger active circle */
+    height: 18px !important; /* Bigger active circle */
+    right: -9px !important; /* Adjust to center (18px/2) */
+}
+
+/* Individual section colors - placed AFTER the generic .current rule to override it */
+/* About section */
+.s-header__menu-links li:nth-child(1).current::after {
+    background-color: #000000 !important; /* Black for About Me */
+    border-color: #000000 !important;
+}
+
+/* What I Build section */
+.s-header__menu-links li:nth-child(2).current::after {
+    background-color: #2196F3 !important; /* Blue for What I Build */
+    border-color: #2196F3 !important;
+}
+
+/* What I Teach section */
+.s-header__menu-links li:nth-child(3).current::after {
+    background-color: #4CAF50 !important; /* Green for What I Teach */
+    border-color: #4CAF50 !important;
+}
+
+/* What I Stand For section */
+.s-header__menu-links li:nth-child(4).current::after {
+    background-color: #FFC107 !important; /* Amber for What I Stand For */
+    border-color: #FFC107 !important;
+}
+
+/* Contact section */
+.s-header__menu-links li:nth-child(5).current::after {
+    background-color: #FF5722 !important; /* Deep Orange for Contact */
+    border-color: #FF5722 !important;
+}
+
+/* Language Toggle Styles */
+.language-toggle {
+    position: absolute;
+    right: 20px; /* Reduced from 70px to align with photo */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-1);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-white);
+    cursor: pointer;
+    z-index: 4; /* Ensure it's above other elements */
+}
+
+.lang-option {
+    padding: 0 4px;
+    transition: color 0.3s ease-in-out;
+}
+
+.lang-option:hover {
+    color: var(--color-1);
+}
+
+.lang-separator {
+    color: var(--color-white);
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 901px) {
+    .language-toggle {
+        right: 20px; /* Reduced from 100px to align with photo */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .language-toggle {
+        right: 20px; /* Reduced from 70px to align with photo */
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .language-toggle {
+        right: 20px; /* Reduced from 50px to align with photo */
+    }
 }

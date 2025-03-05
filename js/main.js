@@ -124,24 +124,63 @@
         
             // Get current scroll position
             let scrollY = window.pageYOffset;
-        
+            
+            // Get the footer element
+            const footer = document.querySelector('#footer');
+            const headerNav = document.querySelector('.s-header__nav');
+            
+            // Check if we're near the footer
+            if (footer && headerNav) {
+                const footerTop = footer.offsetTop;
+                const viewportHeight = window.innerHeight;
+                
+                // Only apply the fading effect on non-mobile views (above 900px)
+                if (window.matchMedia('(min-width: 901px)').matches) {
+                    // Calculate how close we are to the footer as a percentage
+                    const distanceToFooter = footerTop - scrollY - viewportHeight;
+                    const fadeDistance = 200; // Pixels before footer to start fading
+                    
+                    if (distanceToFooter < fadeDistance) {
+                        // Gradually fade out as we approach the footer
+                        const opacity = Math.max(0, distanceToFooter / fadeDistance);
+                        headerNav.style.opacity = opacity.toString();
+                        
+                        // Disable pointer events when nearly transparent
+                        if (opacity < 0.1) {
+                            headerNav.style.pointerEvents = 'none';
+                        } else {
+                            headerNav.style.pointerEvents = 'auto';
+                        }
+                    } else {
+                        headerNav.style.opacity = '1';
+                        headerNav.style.pointerEvents = 'auto';
+                    }
+                }
+            }
+            
             // Loop through sections to get height(including padding and border), 
             // top and ID values for each
             sections.forEach(function(current) {
                 const sectionHeight = current.offsetHeight;
                 const sectionTop = current.offsetTop - 50;
                 const sectionId = current.getAttribute('id');
-            
-               /* If our current scroll position enters the space where current section 
-                * on screen is, add .current class to parent element(li) of the thecorresponding 
-                * navigation link, else remove it. To know which link is active, we use 
-                * sectionId variable we are getting while looping through sections as 
-                * an selector
-                */
+                
+                /* If our current scroll position enters the space where current section 
+                 * on screen is, add .current class to parent element(li) of the corresponding 
+                 * navigation link, else remove it.
+                 */
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector('.s-header__nav a[href*=' + sectionId + ']').parentNode.classList.add('current');
-                } else {
-                    document.querySelector('.s-header__nav a[href*=' + sectionId + ']').parentNode.classList.remove('current');
+                    // First remove current class from all navigation items
+                    document.querySelectorAll('.s-header__menu-links li').forEach(item => {
+                        item.classList.remove('current');
+                    });
+                    // Add current class to the corresponding navigation item
+                    try {
+                        document.querySelector('.s-header__menu-links a[href*="#' + sectionId + '"]').parentNode.classList.add('current');
+                        console.log('Active section: ', sectionId); // Debug log
+                    } catch (e) {
+                        console.error('Navigation error for section: ' + sectionId, e);
+                    }
                 }
             });
         }
@@ -291,6 +330,15 @@
     }; // end ssMoveTo
 
 
+   /* Section Highlighting 
+    * ------------------------------------------------------ */
+    const ssNavHighlight = function() {
+        // This function is now disabled to avoid conflicts
+        // with ssScrollSpy which already handles navigation highlighting
+        return; // Early return to prevent execution
+    };
+
+
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -303,6 +351,7 @@
         ssSwiper();
         ssAlertBoxes();
         ssMoveTo();
+        ssNavHighlight();
 
     })();
 
