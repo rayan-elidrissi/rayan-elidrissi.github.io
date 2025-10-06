@@ -48,6 +48,17 @@
   }
 }
 
+.archive__item {
+  margin-bottom: 0.5rem;
+}
+
+.archive__item-authors,
+.archive__item-venue,
+.archive__item-keywords {
+  margin: 0.1rem 0;
+  line-height: 1.2;
+}
+
 /* remove border*/
 .page__content {
 
