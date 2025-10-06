@@ -14,13 +14,14 @@ author_profile: true
   .craft-card:hover img { transform: scale(1.03); }
   .craft-card:hover .craft-title { transform: translateY(0); }
 
-  /* Force 3 columns on desktop */
-  .grid__wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  @media (max-width: 900px) { .grid__wrapper { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 600px) { .grid__wrapper { grid-template-columns: 1fr; } }
+  /* 3-column craft grid using CSS Grid; neutralize theme grid__item floats */
+  .craft-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  @media (max-width: 900px) { .craft-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .craft-grid { grid-template-columns: 1fr; } }
+  .craft-grid .grid__item { float: none; width: auto; margin: 0; }
 </style>
 
-<div class="grid__wrapper">
+<div class="craft-grid">
 {% for post in site.crafting %}
   {% include archive-single.html type="grid" %}
 {% endfor %}
