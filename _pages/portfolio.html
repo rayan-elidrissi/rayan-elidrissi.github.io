@@ -2,7 +2,7 @@
 layout: archive
 title: "Crafting"
 permalink: /crafting/
-author_profile: false
+author_profile: true
 ---
 
 {% include base_path %}
@@ -10,18 +10,18 @@ author_profile: false
 <style>
   .craft-card { position: relative; display: block; overflow: hidden; border-radius: 6px; }
   .craft-card img { width: 100%; display: block; transition: transform .3s ease; }
-  .craft-card .craft-title {
-    position: absolute; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.55);
-    color: #fff; padding: .6rem .8rem; font-weight: 700; font-size: 1rem;
-    transform: translateY(100%);
-    transition: transform .3s ease;
-  }
+  .craft-card .craft-title { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); color: #fff; padding: .6rem .8rem; font-weight: 700; font-size: 1rem; transform: translateY(100%); transition: transform .3s ease; }
   .craft-card:hover img { transform: scale(1.03); }
   .craft-card:hover .craft-title { transform: translateY(0); }
+
+  /* Grid container to start cards immediately under the title */
+  .craft-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .craft-grid > * { margin: 0; }
 </style>
 
+<div class="craft-grid">
 {% for post in site.crafting %}
   {% include archive-single.html type="grid" %}
 {% endfor %}
+</div>
 
