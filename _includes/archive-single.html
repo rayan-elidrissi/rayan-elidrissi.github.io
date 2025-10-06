@@ -27,7 +27,7 @@
           alt="">
       </div>
     {% endif %}
-    {% if post.collection == 'publications' and teaser %}
+    {% if post.collection == 'publications' and teaser and include.show_teaser %}
       <img class="archive__item-teaser" style="float:right; max-width: 420px; margin-left: 1rem;" src=
         {% if teaser contains "://" %}
           "{{ teaser }}"
