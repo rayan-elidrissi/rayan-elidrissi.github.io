@@ -16,6 +16,8 @@ author_profile: true
   .list__item { margin-bottom: 2.25rem; }
   .archive__item { margin-bottom: 0; }
   .archive__item-titleline, .archive__item-authors, .archive__item-venue { margin: 0; }
+  /* Add space between page title and first publication */
+  .list__item:first-child { margin-top: 2rem; }
   /* keep teaser floated without affecting spacing */
 </style>
 {% for post in site.publications reversed %}
