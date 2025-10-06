@@ -17,7 +17,7 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
+      <a class="craft-card" href="{{ base_path }}{{ post.url }}">
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
@@ -25,7 +25,8 @@
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
           alt="">
-      </div>
+        <div class="craft-title">{{ title }}</div>
+      </a>
     {% endif %}
     {% if post.collection == 'publications' and teaser and include.show_teaser %}
       <img class="archive__item-teaser" style="float:right; max-width: 420px; margin-left: 1rem;" src=

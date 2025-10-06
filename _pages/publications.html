@@ -11,6 +11,13 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+  /* Increase vertical spacing between publication items on this page */
+  .list__item { margin-bottom: 2.25rem; }
+  .archive__item { margin-bottom: 0; }
+  .archive__item-titleline, .archive__item-authors, .archive__item-venue { margin: 0; }
+  /* keep teaser floated without affecting spacing */
+</style>
 {% for post in site.publications reversed %}
   {% include archive-single.html show_teaser=forloop.first %}
 {% endfor %}
