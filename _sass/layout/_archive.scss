@@ -102,6 +102,7 @@
    ========================================================================== */
 
 .list__item {
+  margin-bottom: 1rem;
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
   }
