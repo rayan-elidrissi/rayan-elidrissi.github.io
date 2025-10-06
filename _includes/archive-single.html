@@ -35,27 +35,55 @@
         alt="">
     {% endif %}
 
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    {% if post.collection == 'publications' %}
+      <p><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
+      {% if post.authors or post.author %}
+        <p class="archive__item-authors">{{ post.authors | default: post.author }}</p>
       {% endif %}
-    </h2>
-    
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% if post.venue %}
+        <p class="archive__item-venue">{{ post.venue }}</p>
+      {% endif %}
+    {% else %}
+    {% if post.collection == 'publications' %}
+      <p><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
+      {% if post.authors or post.author %}
+        <p class="archive__item-authors">{{ post.authors | default: post.author }}</p>
+      {% endif %}
+      {% if post.venue %}
+        <p class="archive__item-venue">{{ post.venue }}</p>
+      {% endif %}
+    {% elsif post.collection == 'teaching' %}
+      <p><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
+      <p class="archive__item-venue">
+        {% if post.venue %}{{ post.venue }}{% endif %}{% if post.date %}{% if post.venue %}, {% endif %}{{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
+      </p>
+      {% if post.keywords or post.tags %}
+        <p class="archive__item-keywords">{{ post.keywords | default: post.tags | join: ", " }}</p>
+      {% endif %}
+    {% else %}
+      <h2 class="archive__item-title" itemprop="headline">
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {% else %}
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
+      </h2>
+      
+      {% if post.read_time %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+
+      {% if post.collection == 'teaching' %}
+        <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.collection == 'publications' %}
+        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.date %}
+        <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+    {% endif %}
     {% endif %}
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.date %}
-         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-
-    {% if post.collection != 'teaching' %}
+    {% if post.collection != 'teaching' and post.collection != 'publications' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
       <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
       {% elsif post.excerpt and site.read_more == 'enabled' %}

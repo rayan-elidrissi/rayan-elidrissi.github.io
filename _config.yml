@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "◄"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -27,7 +27,7 @@ author:
   name             : "Rayan El Idrissi"
   pronouns         : # example: "she/her"  
   bio              : "Vision–Language & Embodied AI"
-  location         : "Paris"
+  # location         : "Paris"
   # employer         : "Mines Paris - PSL University"
   uri              : # URL
   email            : "rayan.el_idrissi_dafali@minesparis.psl.eu"

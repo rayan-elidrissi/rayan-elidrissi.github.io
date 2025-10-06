@@ -1,7 +1,7 @@
 ---
 title: "Mathematics for French Classes Préparatoires Scientifiques"
 collection: teaching
-type: "Undergraduate course"
+type: "Undergraduate course - MP/PC/PSI"
 permalink: /teaching/interactive_suite
 venue: "Independant"
 date: 2023-01-01
