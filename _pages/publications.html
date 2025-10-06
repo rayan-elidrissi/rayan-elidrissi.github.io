@@ -14,9 +14,13 @@ author_profile: true
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
+    {% assign category_key = category[0] %}
+    {% if category_key == 'manuscripts' or category_key == 'conferences' %}
+      {% continue %}
+    {% endif %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
+      {% if post.category != category_key %}
         {% continue %}
       {% endif %}
       {% unless title_shown %}
