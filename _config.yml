@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Home"
 title_separator          : "-"
 name                     : &name "Your Name"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Your Name's academic craft"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://rayan-elidrissi.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -224,7 +224,7 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  crafting:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -270,10 +270,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _crafting
   - scope:
       path: ""
-      type: portfolio
+      type: crafting
     values:
       layout: single
       author_profile: true
