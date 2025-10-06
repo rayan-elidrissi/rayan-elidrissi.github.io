@@ -10,9 +10,12 @@ author_profile: true
 <style>
   .craft-card { position: relative; display: block; overflow: hidden; border-radius: 6px; }
   .craft-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: transform .3s ease; }
-  .craft-card .craft-title { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); color: #fff; padding: .6rem .8rem; font-weight: 700; font-size: 1rem; transform: translateY(100%); transition: transform .3s ease; }
+  .craft-overlay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#fff; padding:1rem; background:linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55)); opacity:0; transition: opacity .25s ease; }
+  .craft-title { font-weight:800; font-size:1.45rem; margin-bottom:.35rem; }
+  .craft-meta { font-size:.85rem; letter-spacing:.15em; opacity:.9; display:flex; gap:.5rem; align-items:center; }
+  .craft-meta .craft-year { font-style:italic; opacity:.9; }
   .craft-card:hover img { transform: scale(1.03); }
-  .craft-card:hover .craft-title { transform: translateY(0); }
+  .craft-card:hover .craft-overlay { opacity:1; }
 
   /* 3-column craft grid using CSS Grid; neutralize theme grid__item floats */
   .craft-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }

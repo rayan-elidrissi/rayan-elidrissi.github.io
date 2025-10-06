@@ -25,7 +25,16 @@
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
           alt="">
-        <div class="craft-title">{{ title }}</div>
+        <div class="craft-overlay">
+          <div class="craft-title">{{ title }}</div>
+          {% assign craft_tags = post.tags | join: " | " %}
+          {% if craft_tags or post.date %}
+            <div class="craft-meta">
+              {% if craft_tags %}<span class="craft-tags">{{ craft_tags | upcase }}</span>{% endif %}
+              {% if post.date %}<span class="craft-year">{{ post.date | date: "%Y" }}</span>{% endif %}
+            </div>
+          {% endif %}
+        </div>
       </a>
     {% endif %}
     
