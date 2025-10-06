@@ -63,7 +63,7 @@
         <p class="archive__item-keywords">{{ post.keywords | default: post.tags | join: ", " }}</p>
       {% endif %}
     {% elsif post.collection == 'crafting' %}
-      {# Card and title overlay already rendered above for crafting grid; no extra text here #}
+      {% comment %}Card and title overlay already rendered above for crafting grid; no extra text here{% endcomment %}
     {% else %}
       <h2 class="archive__item-title" itemprop="headline">
         {% if post.link %}
