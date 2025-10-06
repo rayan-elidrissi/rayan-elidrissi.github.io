@@ -21,7 +21,5 @@ My research explores how we can bridge **perception, language, and action** to e
 
 My Vision
 ------
-Technology alone isn’t enough.  
-
-My work is about **amplify human skills**, to make our tools extensions of our mind and hands.
+My work is about **amplifying human skills**, to make our tools extensions of our mind and hands.
 A kind of intelligence that helps us preserve what makes us unique, and pushes us to imagine what’s next.
