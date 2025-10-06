@@ -28,24 +28,31 @@
         <div class="craft-title">{{ title }}</div>
       </a>
     {% endif %}
-    {% if post.collection == 'publications' and teaser and include.show_teaser %}
-      <img class="archive__item-teaser" style="float:right; max-width: 420px; margin-left: 1rem;" src=
-        {% if teaser contains "://" %}
-          "{{ teaser }}"
-        {% else %}
-          "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-        {% endif %}
-        alt="">
-    {% endif %}
+    
 
     {% if post.collection == 'publications' %}
-      <p class="archive__item-titleline"><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
-      {% if post.authors or post.author %}
-        <p class="archive__item-authors">{{ post.authors | default: post.author }}</p>
-      {% endif %}
-      {% if post.venue %}
-        <p class="archive__item-venue">{{ post.venue }}</p>
-      {% endif %}
+      <div class="pub-row">
+        <div class="pub-text">
+          <p class="archive__item-titleline"><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
+          {% if post.authors or post.author %}
+            <p class="archive__item-authors">{{ post.authors | default: post.author }}</p>
+          {% endif %}
+          {% if post.venue %}
+            <p class="archive__item-venue">{{ post.venue }}</p>
+          {% endif %}
+        </div>
+        {% if teaser %}
+          <div class="pub-img">
+            <img src=
+              {% if teaser contains "://" %}
+                "{{ teaser }}"
+              {% else %}
+                "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+              {% endif %}
+              alt="">
+          </div>
+        {% endif %}
+      </div>
     {% else %}
     {% if post.collection == 'teaching' %}
       <p class="archive__item-titleline"><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>

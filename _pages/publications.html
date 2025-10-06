@@ -18,7 +18,15 @@ author_profile: true
   .archive__item-titleline, .archive__item-authors, .archive__item-venue { margin: 0; }
   /* Add space between page title and first publication */
   .list__item:first-child { margin-top: 2rem; }
-  /* keep teaser floated without affecting spacing */
+
+  /* One-row publication layout */
+  .pub-row { display: flex; align-items: flex-start; gap: 1.25rem; }
+  .pub-text { flex: 1 1 auto; min-width: 0; }
+  .pub-img { flex: 0 0 420px; max-width: 420px; }
+  .pub-img img { width: 100%; height: auto; display: block; border-radius: 6px; }
+
+  /* prevent any float overlaps (legacy) */
+  .archive__item:after { content: ""; display: block; clear: both; }
 </style>
 {% for post in site.publications reversed %}
   {% include archive-single.html show_teaser=forloop.first %}
