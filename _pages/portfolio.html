@@ -9,15 +9,18 @@ author_profile: true
 
 <style>
   .craft-card { position: relative; display: block; overflow: hidden; border-radius: 6px; }
-  .craft-card img { width: 100%; display: block; transition: transform .3s ease; }
+  .craft-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: transform .3s ease; }
   .craft-card .craft-title { position: absolute; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.55); color: #fff; padding: .6rem .8rem; font-weight: 700; font-size: 1rem; transform: translateY(100%); transition: transform .3s ease; }
   .craft-card:hover img { transform: scale(1.03); }
   .craft-card:hover .craft-title { transform: translateY(0); }
 
-  /* Use theme grid wrapper for proper floats/layout */
+  /* Force 3 columns on desktop */
+  .grid__wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 900px) { .grid__wrapper { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .grid__wrapper { grid-template-columns: 1fr; } }
 </style>
 
-<div class="craft-grid">
+<div class="grid__wrapper">
 {% for post in site.crafting %}
   {% include archive-single.html type="grid" %}
 {% endfor %}
