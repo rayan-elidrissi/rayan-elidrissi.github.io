@@ -14,9 +14,7 @@ author_profile: true
   .craft-card:hover img { transform: scale(1.03); }
   .craft-card:hover .craft-title { transform: translateY(0); }
 
-  /* Grid container to start cards immediately under the title */
-  .craft-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
-  .craft-grid > * { margin: 0; }
+  /* Use theme grid wrapper for proper floats/layout */
 </style>
 
 <div class="craft-grid">
