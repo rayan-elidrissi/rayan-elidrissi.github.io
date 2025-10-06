@@ -5,7 +5,7 @@ category: manuscripts
 permalink: /publication/2010-10-01-paper-title-number-2
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
 date: 2025-01-01
-venue: "IHM’25, 36th Francophone Conference on Human–Computer Interaction"
+venue: "IHM’25, 36th Francophone Conference on Human-Computer Interaction"
 authors: "Rayan El Idrissi Dafali, Alina Glushkova"
 teaser: vibe.png
 slidesurl: '/files/slides2.pdf'

@@ -20,10 +20,10 @@ author_profile: true
   .list__item:first-child { margin-top: 2rem; }
 
   /* One-row publication layout */
-  .pub-row { display: flex; align-items: flex-start; gap: 1.25rem; }
+  .pub-row { display: flex; align-items: stretch; gap: 1.25rem; }
   .pub-text { flex: 1 1 auto; min-width: 0; }
-  .pub-img { flex: 0 0 420px; max-width: 420px; }
-  .pub-img img { width: 100%; height: auto; display: block; border-radius: 6px; }
+  .pub-img { flex: 0 0 420px; max-width: 420px; display: flex; }
+  .pub-img img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 6px; }
 
   /* prevent any float overlaps (legacy) */
   .archive__item:after { content: ""; display: block; clear: both; }
