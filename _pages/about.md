@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I’m a **research intern at Mines Paris - PSL University**, at the **Center for Robotics**, working on <span className="text-foreground">Vision–Language Action Models</span> that capture and interpret **human gestures, tools, and know-how**.
+I’m a **research intern at Mines Paris - PSL University**, at the **Center for Robotics**, working on <span className="text-foreground">*Vision–Language* Action Models</span> that capture and interpret **human gestures, tools, and know-how**.
 
 My research explores how we can bridge **perception, language, and action** to enable systems that efficiently collaborate with humans. I’m particularly focused on:
 
