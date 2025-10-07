@@ -7,6 +7,14 @@ author_profile: true
 
 {% include base_path %}
 
+<style>
+  /* Increase vertical spacing between teaching items on this page */
+  .list__item { margin-bottom: 2.25rem; }
+  .archive__item { margin-bottom: 0; }
+  /* Optional: add a little space before the first item */
+  .list__item:first-child { margin-top: 2rem; }
+</style>
+
 {% for post in site.teaching reversed %}
   {% include archive-single.html %}
 {% endfor %}
