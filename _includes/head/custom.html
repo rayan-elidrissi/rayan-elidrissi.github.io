@@ -15,22 +15,20 @@
 <meta name="theme-color" content="#ffffff"/>
 
 <style>
-  /* Navbar hover: make text darker */
-  .masthead .greedy-nav .visible-links a:hover {
+  /* Make Publications item always darker */
+  .masthead .greedy-nav .visible-links a.nav-publications {
     color: var(--global-masthead-link-color-hover, #222);
+    font-weight: 600;
   }
 
-  /* Navbar active: draw a rectangle (bar) under the active item */
+  /* Only Publications gets the rectangle when active */
   .masthead .greedy-nav .visible-links a { position: relative; text-decoration: none; }
-  .masthead .greedy-nav .visible-links a::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: -6px;
-    height: 4px;
-    background: transparent;
-  }
-  .masthead .greedy-nav .visible-links a.is-active::after {
-    background: #333; /* dark bar under the current page */
+  .masthead .greedy-nav .visible-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 4px; background: transparent; }
+  .masthead .greedy-nav .visible-links a.nav-publications.is-active::after { background: #333; }
+
+  /* Other items do not change color on hover */
+  .masthead .greedy-nav .visible-links a:not(.nav-publications):hover {
+    color: var(--global-masthead-link-color, inherit);
   }
 </style>
 
