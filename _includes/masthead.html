@@ -17,7 +17,7 @@
             {% if page.url == link.url or page.url contains link.url %}
               {% assign is_active = true %}
             {% endif %}
-            <li class="masthead__menu-item{% if link.title == 'Crafting' %} persist{% endif %}"><a class="{% if is_active %}is-active{% endif %}" href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item persist"><a class="{% if is_active %}is-active{% endif %}" href="{{ domain }}{{ link.url | strip }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>

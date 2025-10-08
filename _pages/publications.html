@@ -28,9 +28,19 @@ author_profile: true
   /* prevent any float overlaps (legacy) */
   .archive__item:after { content: ""; display: block; clear: both; }
 
-  /* darker underline for active navbar when on Publications */
-  .masthead .greedy-nav .visible-links a.is-active {
-    text-decoration-color: #333; /* darker */
+  /* darker page-title bar on Publications page */
+  .archive > .page__title::after {
+    background: #333 !important;
+  }
+
+  /* dark active navbar indicator when on Publications */
+  .masthead .greedy-nav .visible-links a { position: relative; }
+  .masthead .greedy-nav .visible-links a.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 4px;
+    background: #333; /* dark bar */
   }
 </style>
 {% for post in site.publications reversed %}

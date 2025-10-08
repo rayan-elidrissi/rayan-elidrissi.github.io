@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I’m a **research intern at Mines Paris - PSL University**, at the **Center for Robotics**. Primarily, my background is in computer vision—detection/localization, now working into <span className="text-foreground">vision‑language action models</span> that capture and interpret **human gestures, tools, and know-how**.
+I’m a **research intern at Mines Paris - PSL University**, at the **Center for Robotics**. Primarily, my background is in computer vision, now working into <span className="text-foreground">vision‑language action models</span> that capture and interpret **human gestures, tools, and know-how**.
 
 My research explores how we can bridge **perception, language, and action** to enable systems that efficiently collaborate with humans. I’m particularly focused on:
 
