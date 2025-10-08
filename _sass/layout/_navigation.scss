@@ -213,14 +213,6 @@
       display: table-cell;
       vertical-align: middle;
 
-      &:first-child {
-        font-weight: bold;
-        text-wrap: wrap;
-
-        a {
-          margin-left: 0;
-        }
-      }
 
       &:last-child {
         a {
@@ -242,6 +234,9 @@
       position: static;
     }
   }
+
+  /* right group alignment ensures consistent spacing on all pages */
+  .right-links { margin-left: auto; }
 
   .hidden-links {
     position: absolute;

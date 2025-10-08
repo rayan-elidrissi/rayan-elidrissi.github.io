@@ -5,7 +5,7 @@ permalink: /initiatives/
 author_profile: true
 ---
 
-*Selected projects and leadership experiences bridging applied research, education, and innovation.*
+*Selected projects and leadership experiences bridging tech sprints, education, and innovation.*
 
 ---
 
