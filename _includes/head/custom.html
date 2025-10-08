@@ -24,6 +24,10 @@
   .masthead .greedy-nav .visible-links a { position: relative; text-decoration: none; }
   .masthead .greedy-nav .visible-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 4px; background: transparent; }
   .masthead .greedy-nav .visible-links a.is-active::after { background: #333; }
+
+  /* Ensure only the active tab is bold; override theme's first-child bold */
+  .masthead .greedy-nav .visible-links li:first-child { font-weight: inherit; }
+  .masthead .greedy-nav .visible-links a.is-active { font-weight: 600; }
 </style>
 
 <!-- end custom head snippets -->
