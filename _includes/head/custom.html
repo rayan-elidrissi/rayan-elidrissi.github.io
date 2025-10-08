@@ -15,21 +15,15 @@
 <meta name="theme-color" content="#ffffff"/>
 
 <style>
-  /* Make Publications item always darker */
-  .masthead .greedy-nav .visible-links a.nav-publications {
+  /* Navbar hover: darker text for all items */
+  .masthead .greedy-nav .visible-links a:hover {
     color: var(--global-masthead-link-color-hover, #222);
-    font-weight: 600;
   }
 
-  /* Only Publications gets the rectangle when active */
+  /* Navbar active: rectangle under the active item (all tabs) */
   .masthead .greedy-nav .visible-links a { position: relative; text-decoration: none; }
   .masthead .greedy-nav .visible-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 4px; background: transparent; }
-  .masthead .greedy-nav .visible-links a.nav-publications.is-active::after { background: #333; }
-
-  /* Other items do not change color on hover */
-  .masthead .greedy-nav .visible-links a:not(.nav-publications):hover {
-    color: var(--global-masthead-link-color, inherit);
-  }
+  .masthead .greedy-nav .visible-links a.is-active::after { background: #333; }
 </style>
 
 <!-- end custom head snippets -->
