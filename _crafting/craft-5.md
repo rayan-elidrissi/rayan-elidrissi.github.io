@@ -8,11 +8,27 @@ subtitle: "epidemiology · modeling"
 tags: [epidemiology, modeling, inference, public health]
 ---
 
-### Scientific contribution
-- Couples mechanistic vector models with data‑driven parameter estimation to produce calibrated risk maps; evaluates uncertainty and sensitivity to environmental covariates.
+### Context
+Vector‑borne disease risk varies with climate and habitat; field counts and cases are sparse and uncertain.
 
-### STAR
-- **Situation**: Public health agencies need localized, timely risk estimates but data are sparse/noisy.
-- **Task**: Build interpretable models to forecast vector abundance and epidemic risk.
-- **Action**: Implemented SEI‑type compartments and agent simulations; fit parameters via Bayesian inference/optimization; validated on incidence and entomological records.
-- **Result**: Generated weekly risk maps with calibrated uncertainty; identified drivers (temperature, rainfall) and delivered a reproducible analysis pipeline.
+### Goal
+Forecast vector abundance and epidemic potential with transparent, data‑informed models.
+
+### Modeling stack
+- SEI‑style compartments for vectors and hosts; optional agent‑based extensions for hotspots.
+- Bayesian parameter inference with priors on temperature/rainfall response; posterior predictive checks.
+
+```text
+Env covariates ─► rate functions ─► SEI compartments ─► R₀, risk maps
+                                 └► agent hotspots (optional)
+```
+
+### Data & validation
+- Merge entomological surveys, weather reanalysis, and reported cases.
+- Calibrate on historical windows; test on hold‑outs and new seasons; quantify uncertainty.
+
+### Results
+- Weekly risk maps with credible intervals; sensitivity shows temperature/rainfall as leading drivers.
+
+### Deliverables
+- Reproducible notebooks, map visualizations, and comparison against baseline statistical models.

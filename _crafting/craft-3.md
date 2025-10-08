@@ -8,11 +8,27 @@ subtitle: "HEP · anomaly"
 tags: [scientific ml, visualization, anomaly detection, high‑energy physics]
 ---
 
-### Scientific contribution
-- Provides a reusable pipeline for HEP event analysis with ML: efficient data loaders, physics‑aware filters, and integrated anomaly/novelty detection with interactive dashboards for rapid hypothesis iteration.
+### Motivation
+Collider data are large, high‑dimensional, and specialized. Researchers need fast iteration from data ingestion to ML‑assisted inspection.
 
-### STAR
-- **Situation**: HEP datasets are massive and heterogeneous; ML workflows are brittle and slow to iterate.
-- **Task**: Create a high‑performance, user‑friendly toolkit that shortens the loop from data to insight.
-- **Action**: Implemented CSV/ROOT/HDF5 loaders, streaming visualizations, and plug‑in anomaly models; exposed them via Streamlit dashboards.
-- **Result**: Reduced preprocessing/inspection time by >50%; enabled event‑level triage and rapid notebook‑to‑dashboard transitions used in teaching and exploratory analyses.
+### Goal
+Make HEP event exploration interactive and ML‑ready, with anomaly modules and physics‑aware filtering.
+
+### Architecture
+```text
+ROOT/CSV/HDF5 ─► Fast Loaders ─► Filters (kinematics, isolation) ─► ML Blocks (AE, IF, classifiers)
+                                               │                                    │
+                                               └───────► Live Visualizations ◄──────┘
+```
+
+### Features
+- Zero‑copy readers where possible; batch and event‑wise views.
+- Anomaly detection plug‑ins (autoencoders, isolation forest); ROC and score heatmaps.
+- Dashboards for 2D/3D event rendering and energy flow plots.
+
+### Evaluation
+- Case studies on simulated datasets; time‑to‑first‑insight reduced by >50% vs. ad‑hoc notebooks.
+- Sanity checks with physics cuts and classifier calibrations.
+
+### Deliverables
+- Streamlit dashboard, loaders, and example notebooks for quick adoption.

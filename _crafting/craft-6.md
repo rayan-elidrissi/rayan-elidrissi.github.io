@@ -1,18 +1,32 @@
 ---
-title: "Theoretical CS: Quantum Periodicity + QML"
+title: "Quantum Periodicity + QML"
 excerpt: "Qiskit implementations and report on periodicity detection and QML.<br/><img src='/images/crafts/particule.png'>"
 collection: crafting
-teaser: crafts/particule.png
+teaser: crafts/quantum-computer.png
 contribution: "Bridges theory to practice: oracles, inverse QFT circuits, and a QML survey with hybrid proposals."
 subtitle: "quantum · QML"
 tags: [quantum computing, qiskit, theory, machine learning]
 ---
 
-### Scientific contribution
-- Implements periodicity detection circuits with clear oracle design and connects them to a broader QML landscape, outlining hybrid optimization strategies and complexity considerations.
+### Purpose
+Make quantum periodicity and QML concrete via executable circuits and a concise research report.
 
-### STAR
-- **Situation**: Period finding and QML promise speedups but are often presented abstractly.
-- **Task**: Produce didactic, executable artifacts that clarify assumptions and performance limits.
-- **Action**: Built Qiskit notebooks for oracle construction and inverse QFT; authored a report surveying optimization methods and proposing a hybrid approach.
-- **Result**: Reproducible circuits and visualizations used to teach periodicity concepts; a concise research agenda for small‑scale hybrid QML experiments.
+### Targets
+- Implement periodicity detection with explicit oracle design and inverse QFT.
+- Summarize QML optimization methods and outline a hybrid classical‑quantum scheme.
+
+### Design
+```text
+Oracle f(x) with period r ─► QFT-based circuit ─► measurement ─► post‑processing to infer r
+```
+
+### Notebook contents
+- Oracle construction, circuit diagrams, and statevector visualizations.
+- Experiments with noise models and small‑device constraints.
+
+### Report highlights
+- Survey of gradient‑based, annealing, and quantum gradient descent approaches; complexity and practicality.
+- Proposal for a hybrid loop with classical preconditioning and quantum fine‑tuning.
+
+### Takeaways
+- Clear didactic artifacts and a roadmap for small‑scale QML experiments.

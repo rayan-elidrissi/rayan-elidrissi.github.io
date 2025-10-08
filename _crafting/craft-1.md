@@ -8,11 +8,36 @@ subtitle: "vision · localization"
 tags: [computer vision, crowd counting, localization, deep learning]
 ---
 
-### Scientific contribution
-- A purely point‑based framework that dispenses with density maps and pseudo boxes; implements one‑to‑one Hungarian matching and density‑normalized AP (nAP) to evaluate localization quality alongside counting.
+### Why this project
+Counting methods based on density maps lose spatial precision in crowded scenes. This project implements a purely point‑based framework that directly predicts head locations under point supervision, emphasizing localization quality as much as counting accuracy.
 
-### STAR
-- **Situation**: Crowd analysis often relies on density maps that blur localization and degrade metrics at high densities.
-- **Task**: Reproduce and extend P2PNet to localize heads directly with minimal supervision; validate with rigorous metrics and ablations.
-- **Action**: Implemented point‑proposal network, Hungarian matcher, and nAP evaluation; curated training/validation pipelines; performed cross‑dataset tests and label‑efficiency ablations.
-- **Result**: Achieved competitive nMAE and nAP on benchmark datasets; demonstrated robustness under reduced annotations and provided clean, reproducible code suitable for research reuse.
+### Objective
+Localize individuals and estimate counts with minimal supervision while remaining robust to extreme densities and perspective changes.
+
+### Method
+- Direct point proposal network that outputs unordered sets of head centers.
+- One‑to‑one bipartite (Hungarian) matching between predictions and ground truth to avoid duplicates and enforce precision.
+- Loss combines classification and localization terms with a matching cost; training is stable without density maps or pseudo boxes.
+- Density‑Normalized Average Precision (nAP) to evaluate localization under varying crowd densities.
+
+```text
+Image ──► Backbone (e.g., ResNet) ──► Point Proposal Head ──► {p_i}
+                                            │
+                                            ├─ Matching (Hungarian) with GT points
+                                            └─ Loss: cls + loc + λ·match
+```
+
+### Data & training
+- Supports standard crowd datasets; provides data loaders augmenting scale, perspective, and occlusion.
+- Label‑efficiency sweeps (e.g., 100%, 50%, 10% points) to study supervision vs. performance.
+
+### Evaluation & ablations
+- Metrics: MAE/MSE for counts, nAP for localization, and precision/recall at small radii.
+- Ablations: matcher cost terms, NMS vs. set‑prediction, backbone depth, input resolution.
+
+### Outcomes
+- Competitive MAE and strong nAP compared to density‑map baselines, particularly in high‑density regions.
+- Evidence that point‑only supervision maintains localization fidelity and simplifies the pipeline.
+
+### Artifacts
+- Clean training/eval scripts, nAP implementation, and visualizers for predicted point sets.

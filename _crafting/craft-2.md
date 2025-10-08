@@ -8,11 +8,36 @@ subtitle: "GPU · optimization"
 tags: [systems, optimization, gpu, scheduling]
 ---
 
-### Scientific contribution
-- Formalizes GPU cache/memory placement as a mixed‑integer optimization with bandwidth/latency budgets; proposes greedy and Lagrangian heuristics with approximation guarantees and validates on deep learning kernels.
+### Why this project
+Large models bottleneck on memory residency and bandwidth. Strategic placement of tensors in GPU caches/memory can unlock latency savings without hardware changes.
 
-### STAR
-- **Situation**: Multi‑GPU training suffers from suboptimal parameter/activation residency leading to stalls.
-- **Task**: Optimize placement and movement policies to minimize end‑to‑end step time under memory constraints.
-- **Action**: Built simulator over kernel traces; derived cost model; implemented heuristics and a reinforcement baseline; integrated into a PyTorch pass for live profiling.
-- **Result**: 1.2×–1.6× speedups on representative models (transformers/CNNs) with stable convergence; analysis highlights trade‑offs between reuse distance and eviction cost.
+### Objective
+Minimize training/inference step time subject to GPU memory and interconnect constraints.
+
+### Method
+- Cost model over kernel traces capturing reuse distance, transfer latency, and eviction penalties.
+- Optimization view: mixed‑integer program; practical solvers use greedy and Lagrangian relaxations with approximation bounds.
+- Policy integrates with a PyTorch pass to observe live profiling signals and adjust placement online.
+
+```text
+Params/Acts ─► Cost Model ─► Solver (Greedy | Lagrange) ─► Placement Plan
+                                               │
+                                     Runtime Feedback (profiling)
+                                               ▼
+                                       Online Adjustments
+```
+
+### Data & setup
+- Benchmarks on CNN/Transformer workloads; traces collected with Nsight/torch.profiler.
+- Constraints reflect HBM capacity, L2 cache size, and NVLink/PCIe bandwidth caps.
+
+### Evaluation & ablations
+- KPIs: step time, stall breakdown, bytes moved, cache hit rate, convergence parity.
+- Compare against baseline eviction policies and prefetchers.
+
+### Outcomes
+- 1.2×–1.6× speedups with consistent convergence; reduced cross‑GPU traffic and higher cache hit rates.
+- Sensitivity analysis quantifies gains vs. model size and batch size.
+
+### Artifacts
+- Simulator, placement library, and profiling notebooks; reproducible scripts for all ablations.
