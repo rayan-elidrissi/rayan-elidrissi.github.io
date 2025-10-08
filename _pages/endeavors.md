@@ -5,25 +5,24 @@ permalink: /endeavors/
 author_profile: true
 ---
 
-## Endeavors
 
-### 🔹 Hackathons & Events
-**IBM x De Vinci Hackathon: Organizer, 2025**  
-Designed and led a 48-hour AI innovation challenge on IBM WatsonX plateform, involving around 200 students. Supervised the technical track and evaluation process; partnered with IBM researchers for mentorship.
+### 🔹 Events & Hackathons
+**Shipping Coffee**  
+Weekly meetups to talk, build & ship for an evening in a cosy café on Thursdays.
 
-**Shipping Coffee: Organizer, 2025**  
-Weekly meetups to talk, build and ship for an evening in a cosy café on Thursdays.
+**IBM x De Vinci Hackathon**  
+Designed and led a 48-hour AI challenge on IBM WatsonX plateform, involving 200 graduate students. Served on the jury and supervised the evaluation process; partnered with IBM researchers for mentorship.
 
-**Speedwins Lovable × Unaite Hackathon: Attendee, 2025**  
+**Speedwins Lovable × Unaite Hackathon**  
 Built an MVP that helps companies market themselves through automated content generation tailored to their audiences.
 
-**Google Healthcare & Life Sciences Hackathon: Attendee, 2025**  
+**Google Healthcare & Life Sciences Hackathon**  
 Participated in building an AI tool for streamlining healthcare workflows; gained hands-on experience with medical datasets and collaborated with professionals from the health tech sector.
 
-**Doctolib AI Action Summit Hackathon: Attendee, 2025**  
+**Doctolib AI Action Summit Hackathon**  
 Focused on the climate track, where we built a decision-making framework to help determine optimal locations for strategic hardware assets like datacenters.
 
-**ETHOxford: Attendee, 2025**  
+**ETHOxford Hackathon**  
 Joined an international hackathon at the intersection of Decentralized Finance, Blockchain and AI.
 
 ---
