@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Endeavors"
-permalink: /endeavors/
+title: "For Fun"
+permalink: /for fun/
 author_profile: true
 ---
 
