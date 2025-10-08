@@ -1,44 +1,50 @@
 ---
-layout: archive
-title: "For Fun"
-permalink: /for fun/
+layout: page
+title: "Initiatives"
+permalink: /initiatives/
 author_profile: true
 ---
 
-
-### 🔹 Events & Hackathons
-**Shipping Coffee**  
-Weekly meetups to talk, build & ship for an evening in a cosy café on Thursdays.
-
-**IBM x De Vinci Hackathon**  
-Designed and led a 48-hour AI challenge on IBM WatsonX plateform, involving 200 graduate students. Served on the jury and supervised the evaluation process; partnered with IBM researchers for mentorship.
-
-**Speedwins Lovable × Unaite Hackathon**  
-Built an MVP that helps companies market themselves through automated content generation tailored to their audiences.
-
-**Google Healthcare & Life Sciences Hackathon**  
-Participated in building an AI tool for streamlining healthcare workflows; gained hands-on experience with medical datasets and collaborated with professionals from the health tech sector.
-
-**Doctolib AI Action Summit Hackathon**  
-Focused on the climate track, where we built a decision-making framework to help determine optimal locations for strategic hardware assets like datacenters.
-
-**ETHOxford Hackathon**  
-Joined an international hackathon at the intersection of Decentralized Finance, Blockchain and AI.
+# Initiatives  
+*Selected projects and leadership experiences bridging applied research, education, and innovation.*
 
 ---
 
-### 🔹 Student Leadership & Associations
-**Kryptosphere De Vinci — AI Lead**  
-Mentored 100+ students through workshops and hackathons; built partnerships with industry experts.
+## 🔹 Tech Sprints & Impact
 
-**De Vinci Partners — Treasurer**  
-Oversaw €10k annual budget and organized the university's largest tech career fair (11k+ visitors).
+### **IBM × De Vinci Hackathon (Organizer & Jury)**  
+Designed and led a 48-hour AI challenge on the IBM WatsonX platform, involving over 200 graduate students. Supervised the evaluation process and served on the jury; partnered with IBM researchers for mentorship and technical guidance.
+
+### **Google Healthcare & Life Sciences Hackathon**  
+Built an AI tool to streamline healthcare workflows, collaborating with professionals from the health tech sector.
+
+### **Doctolib AI Action Summit Hackathon (Climate Track)**  
+Developed a decision-making framework to optimize datacenter placement for energy efficiency and sustainability to contribute to environmental responsibility in tech infrastructure.
 
 ---
 
-### 🔹 Entrepreneurship
-**Founder, Data Management SaaS**  
-Developed a B2B analytics platform for marketing companies.  
-[check out here](#)
+## 🔹 Community & Leadership
 
+### **Kryptosphere De Vinci - AI Lead**  
+Mentored 100+ students through workshops, research projects, and hackathons.  
+Built partnerships with industry experts and helped structure the AI curriculum for incoming members.
 
+### **Shipping Coffee - Co-Organizer**  
+Co-organized weekly creative meetups bringing students and engineers together to prototype, code, and ship small projects in one evening.
+
+### **De Vinci Partners - Treasurer**  
+Managed annual budget and coordinated my university's largest tech career fair, welcoming over 10,000 visitors.
+
+---
+
+## 🔹 Innovation & Entrepreneurship
+
+### **Founder - Data Management SaaS Platform**  
+Developed and launched a [B2B analytics platform](#) for marketing companies. 
+ for marketing companies, focusing on data integrity and automation.
+
+### **ETHOxford Hackathon**  
+Co-developed an AI-powered crypto assistant to simplify investing, integrating automation and user-friendly access.
+
+### **Speedwins Lovable × Unaite Hackathon**  
+Built an MVP enabling companies to automate content generation tailored to specific audiences through NLP-based pipelines.

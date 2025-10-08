@@ -15,12 +15,13 @@
 <meta name="theme-color" content="#ffffff"/>
 
 <style>
-  /* underline the active navbar link */
+  /* Remove underlines/dark bars on navbar links */
+  .masthead .greedy-nav .visible-links a,
   .masthead .greedy-nav .visible-links a.is-active {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
+    text-decoration: none !important;
   }
+  .masthead .greedy-nav .visible-links a:before { display: none !important; }
+  .masthead .greedy-nav .visible-links a:hover:before { display: none !important; }
 </style>
 
 <!-- end custom head snippets -->

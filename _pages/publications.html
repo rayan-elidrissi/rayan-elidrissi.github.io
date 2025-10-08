@@ -27,6 +27,11 @@ author_profile: true
 
   /* prevent any float overlaps (legacy) */
   .archive__item:after { content: ""; display: block; clear: both; }
+
+  /* darker underline for active navbar when on Publications */
+  .masthead .greedy-nav .visible-links a.is-active {
+    text-decoration-color: #333; /* darker */
+  }
 </style>
 {% for post in site.publications reversed %}
   {% include archive-single.html show_teaser=forloop.first %}
