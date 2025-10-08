@@ -11,10 +11,10 @@ author_profile: true
 
 ## 🔹 Tech Sprints & Impact
 
-### IBM × De Vinci Hackathon (Organizer & Jury)  
+### IBM × De Vinci Hackathon (Organizer & Jury)
 Designed and led a 48-hour AI challenge on the IBM WatsonX platform, involving over 200 graduate students. Supervised the evaluation process and served on the jury; partnered with IBM researchers for mentorship and technical guidance.
 
-### Google Healthcare & Life Sciences Hackathon  
+### Google Healthcare & Life Sciences Hackathon
 Built an AI tool to streamline healthcare workflows, collaborating with professionals from the health tech sector.
 
 ### Doctolib AI Action Summit Hackathon (Climate Track)  
