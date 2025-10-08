@@ -1,9 +1,10 @@
 ---
 title: "Point‑Based Crowd Counting (P2PNet)"
-excerpt: "Label‑efficient crowd localization with point supervision.<br/><img src='/images/500x300.png'>"
+excerpt: "Label‑efficient crowd localization with point supervision.<br/><img src='/images/crafts/crowd.png'>"
 collection: crafting
-teaser: 500x300.png
+teaser: crafts/crowd.png
 contribution: "Point‑supervised localization; nAP metric + Hungarian matching; SOTA‑level replication."
+subtitle: "vision · localization"
 tags: [computer vision, crowd counting, localization, deep learning]
 ---
 

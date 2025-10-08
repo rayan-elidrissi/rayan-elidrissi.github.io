@@ -1,9 +1,10 @@
 ---
 title: "Cache Placement on GPU Optimization"
-excerpt: "Optimization for GPU memory/cache placement to accelerate ML workloads.<br/><img src='/images/500x300.png'>"
+excerpt: "Optimization for GPU memory/cache placement to accelerate ML workloads.<br/><img src='/images/crafts/edge.png'>"
 collection: crafting
-teaser: 500x300.png
+teaser: crafts/edge.png
 contribution: "Formulated cache/memory placement as constrained optimization; heuristics with provable bounds; empirical speedups."
+subtitle: "GPU · optimization"
 tags: [systems, optimization, gpu, scheduling]
 ---
 

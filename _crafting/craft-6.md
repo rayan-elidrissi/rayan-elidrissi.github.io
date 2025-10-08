@@ -1,9 +1,10 @@
 ---
 title: "Theoretical CS: Quantum Periodicity + QML"
-excerpt: "Qiskit implementations and report on periodicity detection and QML.<br/><img src='/images/500x300.png'>"
+excerpt: "Qiskit implementations and report on periodicity detection and QML.<br/><img src='/images/crafts/particule.png'>"
 collection: crafting
-teaser: 500x300.png
+teaser: crafts/particule.png
 contribution: "Bridges theory to practice: oracles, inverse QFT circuits, and a QML survey with hybrid proposals."
+subtitle: "quantum · QML"
 tags: [quantum computing, qiskit, theory, machine learning]
 ---
 

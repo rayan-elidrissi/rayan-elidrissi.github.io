@@ -1,9 +1,10 @@
 ---
 title: "LHC‑Explorer (HEP + ML Toolkit)"
-excerpt: "Interactive exploration of collider events with ML‑based anomaly detection.<br/><img src='/images/500x300.png'>"
+excerpt: "Interactive exploration of collider events with ML‑based anomaly detection.<br/><img src='/images/crafts/lhc.png'>"
 collection: crafting
-teaser: 500x300.png
+teaser: crafts/lhc.png
 contribution: "Bridges HEP formats (ROOT/HDF5) to ML pipelines; fast loaders + anomaly modules; researcher‑friendly visualization."
+subtitle: "HEP · anomaly"
 tags: [scientific ml, visualization, anomaly detection, high‑energy physics]
 ---
 

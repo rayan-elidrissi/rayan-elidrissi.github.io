@@ -1,9 +1,10 @@
 ---
 title: "UAV Swarms for Real‑Time Wildfire Monitoring"
-excerpt: "Multi‑agent sensing and coordination for early fire detection.<br/><img src='/images/500x300.png'>"
+excerpt: "Multi‑agent sensing and coordination for early fire detection.<br/><img src='/images/crafts/wildfire.png'>"
 collection: crafting
-teaser: 500x300.png
+teaser: crafts/wildfire.png
 contribution: "Designs swarm policies and sensor fusion for fast coverage; simulation‑to‑field pathway with dashboard."
+subtitle: "swarm · sensing"
 tags: [robotics, multi‑agent, sensing, wildfire]
 ---
 
