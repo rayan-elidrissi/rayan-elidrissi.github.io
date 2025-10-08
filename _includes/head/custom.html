@@ -15,13 +15,23 @@
 <meta name="theme-color" content="#ffffff"/>
 
 <style>
-  /* Remove underlines/dark bars on navbar links */
-  .masthead .greedy-nav .visible-links a,
-  .masthead .greedy-nav .visible-links a.is-active {
-    text-decoration: none !important;
+  /* Navbar hover: make text darker */
+  .masthead .greedy-nav .visible-links a:hover {
+    color: var(--global-masthead-link-color-hover, #222);
   }
-  .masthead .greedy-nav .visible-links a:before { display: none !important; }
-  .masthead .greedy-nav .visible-links a:hover:before { display: none !important; }
+
+  /* Navbar active: draw a rectangle (bar) under the active item */
+  .masthead .greedy-nav .visible-links a { position: relative; text-decoration: none; }
+  .masthead .greedy-nav .visible-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 4px;
+    background: transparent;
+  }
+  .masthead .greedy-nav .visible-links a.is-active::after {
+    background: #333; /* dark bar under the current page */
+  }
 </style>
 
 <!-- end custom head snippets -->

@@ -1,11 +1,10 @@
 ---
-layout: page
+layout: single
 title: "Initiatives"
 permalink: /initiatives/
 author_profile: true
 ---
 
-# Initiatives  
 *Selected projects and leadership experiences bridging applied research, education, and innovation.*
 
 ---
@@ -40,8 +39,7 @@ Managed annual budget and coordinated my university's largest tech career fair, 
 ## 🔹 Innovation & Entrepreneurship
 
 ### **Founder - Data Management SaaS Platform**  
-Developed and launched a [B2B analytics platform](#) for marketing companies. 
- for marketing companies, focusing on data integrity and automation.
+Developed and launched a [B2B analytics platform](#) for marketing companies, focusing on data integrity and automation.
 
 ### **ETHOxford Hackathon**  
 Co-developed an AI-powered crypto assistant to simplify investing, integrating automation and user-friendly access.
