@@ -205,10 +205,11 @@
   .visible-links {
     display: flex;
     align-items: center;
+    padding-right: 3rem; /* reserve space for absolute menu button */
 
     li {
-      display: table-cell;
-      vertical-align: middle;
+      display: flex;
+      align-items: center;
 
       &:first-child {
         font-weight: bold;
