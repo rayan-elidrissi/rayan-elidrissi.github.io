@@ -31,6 +31,9 @@
           {% if craft_tags %}
             <div class="craft-keywords">{{ craft_tags | upcase }}</div>
           {% endif %}
+          {% if post.collection == 'crafting' and post.contribution %}
+            <div class="craft-contrib">{{ post.contribution }}</div>
+          {% endif %}
           {% if post.date %}
             <div class="craft-year">{{ post.date | date: "%Y" }}</div>
           {% endif %}
