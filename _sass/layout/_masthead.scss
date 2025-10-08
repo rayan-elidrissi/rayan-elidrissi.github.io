@@ -36,12 +36,20 @@
 
     nav {
       z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     a {
       text-decoration: none;
     }
   }
+}
+
+.greedy-nav .site-title {
+  margin-right: auto;
+  font-weight: 700;
 }
 
 .masthead__menu {

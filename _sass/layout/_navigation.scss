@@ -172,10 +172,13 @@
    Priority plus navigation
    ========================================================================== */
 
+
 .greedy-nav {
   position: relative;
   min-width: 250px;
   background: var(--global-bg-color);
+  display: flex;
+  align-items: center;
 
   a {
     display: block;
@@ -203,18 +206,16 @@
   }
 
   .visible-links {
-    display: flex;
-    align-items: center;
-    padding-right: 3rem; /* reserve space for absolute menu button */
+    display: table;
+    padding-right: 0;
 
     li {
-      display: flex;
-      align-items: center;
+      display: table-cell;
+      vertical-align: middle;
 
       &:first-child {
         font-weight: bold;
         text-wrap: wrap;
-        margin-right: auto;
 
         a {
           margin-left: 0;

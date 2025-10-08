@@ -5,8 +5,8 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
+        <a class="site-title" href="{{ base_path }}/">{{ site.title }}</a>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -19,7 +19,6 @@
             {% endif %}
             <li class="masthead__menu-item{% if link.title == 'Crafting' %} persist{% endif %}"><a class="{% if is_active %}is-active{% endif %}" href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-          
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
