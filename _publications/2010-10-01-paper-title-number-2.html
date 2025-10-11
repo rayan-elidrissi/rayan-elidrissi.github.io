@@ -1,0 +1,108 @@
+---
+title: "VIBE : Video Interaction Benchmark Environment"
+collection: publications
+category: manuscripts
+permalink: /publication/2010-10-01-paper-title-number-2
+excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
+date: 2025-01-01
+venue: "IHM’25, Extended Proceedings of the 36th Francophone Conference on Human-Computer Interaction"
+authors: "Rayan El Idrissi Dafali, Alina Glushkova"
+slidesurl: '/files/slides2.pdf'
+paperurl: '/files/paper2.pdf'
+citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+---
+<p>
+<a href="https://github.com/rayan-elidrissi/VIBE">📊 VIBE</a> • 
+<a href="https://github.com/rayan-elidrissi/VIBE">🔗 Code</a>
+</p>
+
+<img src="/images/vibe.png" alt="Illustration of VIBE interface showing video processing and model outputs">
+
+<hr>
+
+<h2>Overview</h2>
+
+<p>VIBE is an interactive benchmarking platform that enables real-time evaluation of computer vision models through a unified interface. The system supports multiple input modalities (video upload, webcam streaming) and vision tasks (detection, segmentation, tracking, captioning).</p>
+
+<hr>
+
+<h2>How It Works</h2>
+
+<pre>
+```mermaid
+graph TD
+    A[Video Input] --> |Webcam/Upload| B[Preprocessing]
+    B --> C[Model Execution]
+    C --> D[Metrics & Visualization]
+    D --> E[Result Export]
+    
+    subgraph Input
+    A --> |Live Capture| A1[Webcam Stream]
+    A --> |File Upload| A2[Video File ≤30s]
+    end
+    
+    subgraph Processing
+    B --> B1[Frame Extraction]
+    B --> B2[Resizing]
+    B --> B3[Normalization]
+    end
+    
+    subgraph Inference
+    C --> C1[Parallel Model Loading]
+    C --> C2[Sequential Processing]
+    C --> C3[Performance Tracking]
+    end
+    
+    subgraph Output
+    D --> D1[Real-time Plots]
+    D --> D2[Visual Overlays]
+    E --> E1[CSV Export]
+    E --> E2[JSON Export]
+    end
+```
+</pre>
+
+<div style="display: flex; gap: 2rem; align-items: flex-start">
+  <div style="flex: 1">
+    <img src="placeholder.png" alt="Results Visualization" style="width: 100%; height: auto; margin-bottom: 1rem;">
+    
+    <div style="margin: 2rem 0">
+      <div style="display: flex; justify-content: space-between; width: 100%;">
+        <img src="/images/500x300.png" alt="Urban Street Scene" style="width: 24%; height: auto;">
+        <img src="/images/500x300.png" alt="Sports Action" style="width: 24%; height: auto;">
+        <img src="/images/500x300.png" alt="Indoor Activity" style="width: 24%; height: auto;">
+        <img src="/images/500x300.png" alt="Nature Scene" style="width: 24%; height: auto;">
+      </div>
+    </div>
+
+    <em>Click any video to run benchmarks</em>
+  </div>
+
+  <div style="flex: 1">
+    <table>
+      <tr><th>Model</th><th>Latency (ms)</th><th>mAP</th><th>Consistency</th><th>Memory</th></tr>
+      <tr><td>Model A</td><td>140</td><td>72.4%</td><td>0.88</td><td>4.3 GB</td></tr>
+      <tr><td>Model B</td><td>160</td><td>74.1%</td><td>0.86</td><td>5.1 GB</td></tr>
+      <tr><td>Model C</td><td>128</td><td>70.7%</td><td>0.90</td><td>3.8 GB</td></tr>
+    </table>
+
+    <ul>
+      <li>Average Processing Speed: 145ms/frame</li>
+      <li>GPU Memory Peak: 5.1 GB</li>
+      <li>Inference Stability: 0.88</li>
+      <li>Detection Accuracy: 72.4% mAP</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Bibtex</h2>
+<pre>
+@inproceedings{elidrissi2025vibe,
+    title={VIBE: Video Interaction Benchmark Environment},
+    author={El Idrissi Dafali, Rayan and Glushkova, Alina},
+    booktitle={Extended Proceedings of the 36th Francophone Conference on Human-Computer Interaction},
+    year={2025},
+    publisher={ACM},
+    series={IHM '25}
+}
+</pre>
