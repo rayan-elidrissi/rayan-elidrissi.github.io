@@ -60,40 +60,30 @@ graph TD
 ---
 
 ## Results
-<div style="display: flex; gap: 20px;">
-<div style="flex: 1;">
 
-**Pre-uploaded Test Videos (5s)**  
-- [🎥 Urban Street Scene] [Placeholder] - People walking, cars moving
-- [🎥 Sports Action] [Placeholder] - Basketball game highlights  
-- [🎥 Indoor Activity] [Placeholder] - Kitchen cooking sequence
-- [🎥 Nature Scene] [Placeholder] - Wildlife in natural habitat
-- [🎥 Crowd Scene] [Placeholder] - Public gathering footage
+### Pre-uploaded Test Videos (5s)
+- 🎥 Urban Street Scene - People walking, cars moving
+- 🎥 Sports Action - Basketball game highlights  
+- 🎥 Indoor Activity - Kitchen cooking sequence
+- 🎥 Nature Scene - Wildlife in natural habitat
+- 🎥 Crowd Scene - Public gathering footage
 
 *Click any video to run benchmarks*
 
-</div>
-<div style="flex: 1;">
+### Model Performance Analysis
 
-**Model Performance Analysis**
+| Model   | Latency (ms) | mAP  | Consistency | Memory |
+|---------|--------------|------|-------------|--------|
+| Model A | 140         | 72.4% | 0.88       | 4.3 GB |
+| Model B | 160         | 74.1% | 0.86       | 5.1 GB |
+| Model C | 128         | 70.7% | 0.90       | 3.8 GB |
 
-| Model   | Latency (ms) | mAP    | Consistency | Memory  |
-|:--------|:------------:|:--------|:-----------:|:--------|
-| Model A | 140          | 72.4%   | 0.88        | 4.3 GB  |
-| Model B | 160          | 74.1%   | 0.86        | 5.1 GB  |
-| Model C | 128          | 70.7%   | 0.90        | 3.8 GB  |
-
-**Key Metrics**
+### Key Metrics
 - Average Processing Speed: 145ms/frame
 - GPU Memory Peak: 5.1 GB
 - Inference Stability: 0.88
 - Detection Accuracy: 72.4% mAP
 
-</div>
-</div>
-
-</div>
-</div>
 
 ```bibtex
 @inproceedings{elidrissi2025vibe,
