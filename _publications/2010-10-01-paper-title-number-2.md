@@ -12,7 +12,7 @@ paperurl: '/files/paper2.pdf'
 citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
 
-[🔗 Code](https://github.com/rayan-elidrissi/VIBE) • [📚 Open-source Platform](https://github.com/rayan-elidrissi/VIBE)
+[📚 Open-source Platform](https://github.com/rayan-elidrissi/VIBE) • [🔗 Code](https://github.com/rayan-elidrissi/VIBE)
 
 ![Illustration of VIBE interface showing video processing and model outputs](/images/vibe.png)
 
@@ -60,17 +60,15 @@ graph TD
 ---
 
 ## Results
-### Interactive Results Dashboard
-
 <div style="display: flex; gap: 20px;">
 <div style="flex: 1;">
 
 **Pre-uploaded Test Videos (5s)**  
-- [🎥 Urban Street Scene](#) - People walking, cars moving
-- [🎥 Sports Action](#) - Basketball game highlights  
-- [🎥 Indoor Activity](#) - Kitchen cooking sequence
-- [🎥 Nature Scene](#) - Wildlife in natural habitat
-- [🎥 Crowd Scene](#) - Public gathering footage
+- [🎥 Urban Street Scene] [Placeholder] - People walking, cars moving
+- [🎥 Sports Action] [Placeholder] - Basketball game highlights  
+- [🎥 Indoor Activity] [Placeholder] - Kitchen cooking sequence
+- [🎥 Nature Scene] [Placeholder] - Wildlife in natural habitat
+- [🎥 Crowd Scene] [Placeholder] - Public gathering footage
 
 *Click any video to run benchmarks*
 
@@ -79,17 +77,20 @@ graph TD
 
 **Model Performance Analysis**
 
-| Model | Latency (ms) | mAP | Consistency | Memory |
-|-------|--------------|-----|-------------|---------|
-| Model A | 140 | 72.4% | 0.88 | 4.3 GB |
-| Model B | 160 | 74.1% | 0.86 | 5.1 GB |
-| Model C | 128 | 70.7% | 0.90 | 3.8 GB |
+| Model   | Latency (ms) | mAP    | Consistency | Memory  |
+|:--------|:------------:|:--------|:-----------:|:--------|
+| Model A | 140          | 72.4%   | 0.88        | 4.3 GB  |
+| Model B | 160          | 74.1%   | 0.86        | 5.1 GB  |
+| Model C | 128          | 70.7%   | 0.90        | 3.8 GB  |
 
 **Key Metrics**
 - Average Processing Speed: 145ms/frame
 - GPU Memory Peak: 5.1 GB
 - Inference Stability: 0.88
 - Detection Accuracy: 72.4% mAP
+
+</div>
+</div>
 
 </div>
 </div>
