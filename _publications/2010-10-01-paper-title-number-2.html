@@ -28,71 +28,9 @@ citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 
 
 <h2>How It Works</h2>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-<div class="mermaid">
-graph TD
-    A[Video Input] --> |Webcam/Upload| B[Preprocessing]
-    B --> C[Model Execution]
-    C --> D[Metrics & Visualization]
-    D --> E[Result Export]
-    
-    subgraph Input
-    A --> |Live Capture| A1[Webcam Stream]
-    A --> |File Upload| A2[Video File ≤30s]
-    end
-    
-    subgraph Processing
-    B --> B1[Frame Extraction]
-    B --> B2[Resizing]
-    B --> B3[Normalization]
-    end
-    
-    subgraph Inference
-    C --> C1[Parallel Model Loading]
-    C --> C2[Sequential Processing]
-    C --> C3[Performance Tracking]
-    end
-    
-    subgraph Output
-    D --> D1[Real-time Plots]
-    D --> D2[Visual Overlays]
-    E --> E1[CSV Export]
-    E --> E2[JSON Export]
-    end
-</div>
-```mermaid
-graph TD
-    A[Video Input] --> |Webcam/Upload| B[Preprocessing]
-    B --> C[Model Execution]
-    C --> D[Metrics & Visualization]
-    D --> E[Result Export]
-    
-    subgraph Input
-    A --> |Live Capture| A1[Webcam Stream]
-    A --> |File Upload| A2[Video File ≤30s]
-    end
-    
-    subgraph Processing
-    B --> B1[Frame Extraction]
-    B --> B2[Resizing]
-    B --> B3[Normalization]
-    end
-    
-    subgraph Inference
-    C --> C1[Parallel Model Loading]
-    C --> C2[Sequential Processing]
-    C --> C3[Performance Tracking]
-    end
-    
-    subgraph Output
-    D --> D1[Real-time Plots]
-    D --> D2[Visual Overlays]
-    E --> E1[CSV Export]
-    E --> E2[JSON Export]
-    end
-```
-</pre>
+<img src="/images/500x300.png" alt="VIBE System Architecture Diagram" style="width: 100%; max-width: 500px;">
+
+<h2>Output Visualization</h2>
 
 <div style="display: flex; gap: 2rem; align-items: flex-start">
   <div style="flex: 1">
