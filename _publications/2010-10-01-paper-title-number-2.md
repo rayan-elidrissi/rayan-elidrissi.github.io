@@ -12,7 +12,7 @@ paperurl: '/files/paper2.pdf'
 citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
 
-[📚 Open-source Platform](https://github.com/rayan-elidrissi/VIBE) • [🔗 Code](https://github.com/rayan-elidrissi/VIBE)
+[📊 VIBE](https://github.com/rayan-elidrissi/VIBE) • [🔗 Code](https://github.com/rayan-elidrissi/VIBE)
 
 ![Illustration of VIBE interface showing video processing and model outputs](/images/vibe.png)
 
@@ -20,7 +20,7 @@ citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 
 
 ## Overview
 
-VIBE is an interactive benchmarking platform that enables real-time evaluation of computer vision models through a unified interface. Supporting multiple input modalities (video upload, webcam streaming) and vision tasks (detection, segmentation, tracking, captioning), the system facilitates human-in-the-loop assessment under realistic conditions. While traditional benchmarks rely on offline evaluation, VIBE uniquely enables immediate comparative analysis of model performance, latency, and stability - addressing a critical gap in understanding how vision systems behave with actual users and real-world data streams. The platform enforces practical constraints (30-second video limit, streaming inference) while ensuring reproducibility through standardized CSV/JSON exports.
+VIBE is an interactive benchmarking platform that enables real-time evaluation of computer vision models through a unified interface. The system supports multiple input modalities (video upload, webcam streaming) and vision tasks (detection, segmentation, tracking, captioning).
 
 ---
 
@@ -57,34 +57,40 @@ graph TD
     end
 ```
 
----
+<div style="display: flex; gap: 2rem; align-items: flex-start">
 
-## Results
+<div style="flex: 1">
+<img src="placeholder.png" alt="Results Visualization" width="500" height="300"/>
 
-### Pre-uploaded Test Videos (5s)
-- 🎥 Urban Street Scene - People walking, cars moving
-- 🎥 Sports Action - Basketball game highlights  
-- 🎥 Indoor Activity - Kitchen cooking sequence
-- 🎥 Nature Scene - Wildlife in natural habitat
-- 🎥 Crowd Scene - Public gathering footage
+<div style="margin: 2rem 0">
+<div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+    <img src="/images/urban.png" alt="Urban Street Scene" width="500" height="300"/>
+    <img src="/images/sports.png" alt="Sports Action" width="500" height="300"/>
+    <img src="/images/indoor.png" alt="Indoor Activity" width="500" height="300"/>
+    <img src="/images/nature.png" alt="Nature Scene" width="500" height="300"/>
+    <img src="/images/crowd.png" alt="Crowd Scene" width="500" height="300"/>
+</div>
+</div>
 
 *Click any video to run benchmarks*
+</div>
 
-### Model Performance Analysis
-
+<div style="flex: 1">
 | Model   | Latency (ms) | mAP  | Consistency | Memory |
 |---------|--------------|------|-------------|--------|
 | Model A | 140         | 72.4% | 0.88       | 4.3 GB |
 | Model B | 160         | 74.1% | 0.86       | 5.1 GB |
 | Model C | 128         | 70.7% | 0.90       | 3.8 GB |
 
-### Key Metrics
 - Average Processing Speed: 145ms/frame
-- GPU Memory Peak: 5.1 GB
+- GPU Memory Peak: 5.1 GB 
 - Inference Stability: 0.88
 - Detection Accuracy: 72.4% mAP
+</div>
 
+</div>
 
+## Bibtex
 ```bibtex
 @inproceedings{elidrissi2025vibe,
     title={VIBE: Video Interaction Benchmark Environment},
