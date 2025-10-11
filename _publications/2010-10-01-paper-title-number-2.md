@@ -12,9 +12,9 @@ paperurl: '/files/paper2.pdf'
 citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
 
-[🔗 GitHub](https://github.com/rayan-elidrissi/VIBE) • [⚙️ Installation](#installation) • [📊 Results](#results) • [📚 Citation](#citation)
+[🔗 Code](https://github.com/rayan-elidrissi/VIBE) • [📚 Open-source Platform](https://github.com/rayan-elidrissi/VIBE)
 
-![Illustration of VIBE interface showing video processing and model outputs](images/vibe.png)
+![Illustration of VIBE interface showing video processing and model outputs](/images/vibe.png)
 
 ---
 
