@@ -1,5 +1,5 @@
 ---
-title: "LHC‑Explorer (HEP + ML Toolkit)"
+title: "Large Hadron Collider: High-Energy Physics Analysis"
 excerpt: "Interactive exploration of collider events with ML‑based anomaly detection.<br/><img src='/images/crafts/lhc.png'>"
 collection: crafting
 teaser: crafts/lhc.png
