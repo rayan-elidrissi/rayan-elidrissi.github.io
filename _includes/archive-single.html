@@ -76,7 +76,7 @@
       </div>
     {% else %}
     {% if post.collection == 'teaching' %}
-      <p class="archive__item-titleline"><strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color: inherit; text-decoration: none;">{{ title }}</a></strong></p>
+      <p class="archive__item-titleline"><strong><span style="color: inherit; text-decoration: none;">{{ title }}</span></strong></p>
       <p class="archive__item-venue">
         {% if post.venue %}{{ post.venue }}{% endif %}{% if post.date %}{% if post.venue %}, {% endif %}{{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
       </p>
