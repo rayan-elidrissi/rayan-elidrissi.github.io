@@ -17,3 +17,40 @@
 </script>
 
 <!-- end custom footer snippets -->
+
+<script>
+  (function() {
+    function forceHamburgerOnMobile() {
+      var isMobile = window.matchMedia('(max-width: 768px)').matches;
+      var $nav = $('#site-nav');
+      if ($nav.length === 0) return;
+      var $btn = $nav.find('button');
+      var $vlinks = $nav.find('.visible-links');
+      var $hlinks = $nav.find('.hidden-links');
+
+      if (isMobile) {
+        // Move all items into the hidden list and show the hamburger button
+        $vlinks.children().each(function() { $(this).prependTo($hlinks); });
+        $btn.removeClass('hidden');
+        $btn.attr('count', $hlinks.children().length);
+        // Keep dropdown closed by default; toggle still works via main script
+        $hlinks.addClass('hidden');
+        // Reset greedy-nav state and recompute spacing
+        if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
+        if (typeof updateNav === 'function') { updateNav(); }
+      } else {
+        // Restore items to visible list for larger screens, then let greedy-nav decide
+        $hlinks.children().each(function() { $(this).appendTo($vlinks); });
+        if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
+        if (typeof updateNav === 'function') { updateNav(); }
+      }
+    }
+
+    // Run once DOM is ready, and on resize/orientation change
+    $(document).ready(forceHamburgerOnMobile);
+    $(window).on('resize', forceHamburgerOnMobile);
+    if (screen.orientation && screen.orientation.addEventListener) {
+      screen.orientation.addEventListener('change', forceHamburgerOnMobile);
+    }
+  })();
+</script>
