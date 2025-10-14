@@ -20,37 +20,60 @@
 
 <script>
   (function() {
-    function forceHamburgerOnMobile() {
-      var isMobile = window.matchMedia('(max-width: 768px)').matches;
-      var $nav = $('#site-nav');
-      if ($nav.length === 0) return;
-      var $btn = $nav.find('button');
-      var $vlinks = $nav.find('.visible-links');
-      var $hlinks = $nav.find('.hidden-links');
+    function moveAllToHamburger() {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      var btn = nav.querySelector('button');
+      var vlinks = nav.querySelector('.visible-links');
+      var hlinks = nav.querySelector('.hidden-links');
+      if (!btn || !vlinks || !hlinks) return;
 
-      if (isMobile) {
-        // Move all items into the hidden list and show the hamburger button
-        $vlinks.children().each(function() { $(this).prependTo($hlinks); });
-        $btn.removeClass('hidden');
-        $btn.attr('count', $hlinks.children().length);
-        // Keep dropdown closed by default; toggle still works via main script
-        $hlinks.addClass('hidden');
-        // Reset greedy-nav state and recompute spacing
-        if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
-        if (typeof updateNav === 'function') { updateNav(); }
-      } else {
-        // Restore items to visible list for larger screens, then let greedy-nav decide
-        $hlinks.children().each(function() { $(this).appendTo($vlinks); });
-        if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
-        if (typeof updateNav === 'function') { updateNav(); }
+      // Move every visible item into the hidden list
+      while (vlinks.firstElementChild) {
+        hlinks.insertBefore(vlinks.lastElementChild, hlinks.firstChild);
       }
+      btn.classList.remove('hidden');
+      btn.setAttribute('count', hlinks.children.length);
+      hlinks.classList.add('hidden');
+      if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
     }
 
-    // Run once DOM is ready, and on resize/orientation change
-    $(document).ready(forceHamburgerOnMobile);
-    $(window).on('resize', forceHamburgerOnMobile);
-    if (screen.orientation && screen.orientation.addEventListener) {
-      screen.orientation.addEventListener('change', forceHamburgerOnMobile);
+    function restoreFromHamburger() {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      var vlinks = nav.querySelector('.visible-links');
+      var hlinks = nav.querySelector('.hidden-links');
+      if (!vlinks || !hlinks) return;
+      while (hlinks.firstElementChild) {
+        vlinks.appendChild(hlinks.firstElementChild);
+      }
+      if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
     }
+
+    function isMobile() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    // Patch greedy-nav's updateNav after scripts load
+    window.addEventListener('load', function() {
+      var original = window.updateNav;
+      window.updateNav = function() {
+        if (isMobile()) {
+          moveAllToHamburger();
+          return; // prevent greedy logic from pulling items back out
+        }
+        restoreFromHamburger();
+        if (typeof original === 'function') {
+          original();
+        }
+      };
+
+      // Run once immediately and then on resize/orientation
+      window.updateNav();
+      window.addEventListener('resize', window.updateNav);
+      if (screen.orientation && screen.orientation.addEventListener) {
+        screen.orientation.addEventListener('change', window.updateNav);
+      }
+    });
   })();
 </script>
