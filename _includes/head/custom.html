@@ -31,9 +31,10 @@
 
   /* Mobile: prevent overlap by hiding inline links and keeping only the burger */
   @media (max-width: 768px) {
+    /* Policy: on mobile we delegate layout to the dropdown only */
     .masthead .greedy-nav .visible-links { display: none !important; }
-    .masthead .greedy-nav button { display: block !important; margin-left: auto; }
-    /* Ensure burger stays visible even if JS adds .hidden */
+    .masthead .greedy-nav .hidden-links.hidden { display: none; } /* default closed */
+    .masthead .greedy-nav button { display: block; margin-left: auto; }
     .masthead .greedy-nav button.hidden { display: block !important; }
   }
 </style>

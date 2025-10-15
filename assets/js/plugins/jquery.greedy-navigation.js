@@ -17,8 +17,10 @@ function updateNav() {
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
-  // Force all links into the hidden menu on small screens
-  if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+  // Mobile policy: force all links into the hidden menu
+  var isMobile = (window.matchMedia && window.matchMedia('(max-width: 768px)').matches);
+  if (isMobile) {
+    // Move everything into hidden
     while ($vlinks.children().length > 0) {
       $vlinks.children().last().prependTo($hlinks);
     }
@@ -26,6 +28,7 @@ function updateNav() {
     $hlinks.addClass('hidden');
     breaks = [];
     $btn.attr('count', $hlinks.children().length);
+    // Update paddings based on masthead height
     var mastheadHeight = $('.masthead').height();
     $('body').css('padding-top', mastheadHeight + 'px');
     if ($('.author__urls-wrapper button').is(':visible')) {
@@ -34,6 +37,23 @@ function updateNav() {
       $('.sidebar').css('padding-top', mastheadHeight + 'px');
     }
     return;
+  } else {
+    // Desktop: restore any hidden items before running standard greedy logic
+    if ($hlinks.children().length > 0) {
+      if ($vlinks_persist_tail.length > 0 && $vlinks_persist_tail.children().length > 0) {
+        // insert before tail block to keep tail at end
+        while ($hlinks.children().length > 0) {
+          $hlinks.children().last().insertBefore($vlinks_persist_tail);
+        }
+      } else {
+        while ($hlinks.children().length > 0) {
+          $hlinks.children().last().appendTo($vlinks);
+        }
+      }
+      breaks = [];
+      $btn.addClass('hidden');
+      $hlinks.addClass('hidden');
+    }
   }
 
   // The visible list is overflowing the nav

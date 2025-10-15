@@ -27,7 +27,7 @@
     function scheduleEnforce() { setTimeout(enforceBurger, 0); }
 
     // Run after initial module script executes
-    window.addEventListener('load', scheduleEnforce);
+    window.addEventListener('load', scheduleEnforce, { once: true });
     window.addEventListener('resize', scheduleEnforce);
     if (screen.orientation && screen.orientation.addEventListener) {
       screen.orientation.addEventListener('change', scheduleEnforce);
@@ -39,10 +39,23 @@
       var nav = document.getElementById('site-nav');
       if (!nav || observerStarted) return;
       var v = nav.querySelector('.visible-links');
+      var btn = nav.querySelector('button');
       if (!v) return;
       var mo = new MutationObserver(function(){ if (isMobile()) scheduleEnforce(); });
       mo.observe(v, { childList: true });
       observerStarted = true;
+
+      // Watch button class changes and unhide on mobile if theme re-applies .hidden
+      if (btn) {
+        var btnObs = new MutationObserver(function(muts){
+          if (!isMobile()) return;
+          if (btn.classList.contains('hidden')) {
+            btn.classList.remove('hidden');
+            btn.style.display = 'block';
+          }
+        });
+        btnObs.observe(btn, { attributes: true, attributeFilter: ['class'] });
+      }
     });
   })();
   </script>
