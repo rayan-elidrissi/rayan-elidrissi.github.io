@@ -33,6 +33,8 @@
   @media (max-width: 768px) {
     .masthead .greedy-nav .visible-links { display: none !important; }
     .masthead .greedy-nav button { margin-left: auto; }
+    /* Ensure burger stays visible even if JS adds .hidden */
+    .masthead .greedy-nav button.hidden { display: block !important; }
   }
 </style>
 
