@@ -1,3 +1,48 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 {% include analytics.html %}
+
+<script>
+  (function() {
+    function isMobile() { return window.matchMedia('(max-width: 768px)').matches; }
+
+    function enforceBurger() {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      var btn = nav.querySelector('button');
+      var v = nav.querySelector('.visible-links');
+      var h = nav.querySelector('.hidden-links');
+      if (!btn || !v || !h) return;
+      if (isMobile()) {
+        while (v.firstElementChild) { h.insertBefore(v.lastElementChild, h.firstChild); }
+        btn.classList.remove('hidden');
+        btn.setAttribute('count', h.children.length);
+        h.classList.add('hidden');
+      } else {
+        // restore all for desktop; greedy-nav will trim if needed
+        while (h.firstElementChild) { v.appendChild(h.firstElementChild); }
+      }
+    }
+
+    function scheduleEnforce() { setTimeout(enforceBurger, 0); }
+
+    // Run after initial module script executes
+    window.addEventListener('load', scheduleEnforce);
+    window.addEventListener('resize', scheduleEnforce);
+    if (screen.orientation && screen.orientation.addEventListener) {
+      screen.orientation.addEventListener('change', scheduleEnforce);
+    }
+
+    // Watch DOM mutations in nav and re-apply on mobile
+    var observerStarted = false;
+    window.addEventListener('load', function(){
+      var nav = document.getElementById('site-nav');
+      if (!nav || observerStarted) return;
+      var v = nav.querySelector('.visible-links');
+      if (!v) return;
+      var mo = new MutationObserver(function(){ if (isMobile()) scheduleEnforce(); });
+      mo.observe(v, { childList: true });
+      observerStarted = true;
+    });
+  })();
+  </script>

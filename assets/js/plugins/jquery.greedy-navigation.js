@@ -17,6 +17,25 @@ function updateNav() {
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
+  // Force all links into the hidden menu on small screens
+  if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+    while ($vlinks.children().length > 0) {
+      $vlinks.children().last().prependTo($hlinks);
+    }
+    $btn.removeClass('hidden');
+    $hlinks.addClass('hidden');
+    breaks = [];
+    $btn.attr('count', $hlinks.children().length);
+    var mastheadHeight = $('.masthead').height();
+    $('body').css('padding-top', mastheadHeight + 'px');
+    if ($('.author__urls-wrapper button').is(':visible')) {
+      $('.sidebar').css('padding-top', '');
+    } else {
+      $('.sidebar').css('padding-top', mastheadHeight + 'px');
+    }
+    return;
+  }
+
   // The visible list is overflowing the nav
   if ($vlinks.width() > availableSpace) {
 
