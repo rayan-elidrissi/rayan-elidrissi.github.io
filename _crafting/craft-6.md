@@ -1,5 +1,5 @@
 ---
-title: "Quantum Periodicity & Quantum Machine Learning (QML)"
+title: "Quantum Periodicity & Quantum Machine Learning"
 excerpt: "Qiskit implementations and report on periodicity detection and QML.<br/><img src='/images/crafts/particule.png'>"
 collection: crafting
 teaser: crafts/quantum-computer.png
