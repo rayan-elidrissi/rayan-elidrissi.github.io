@@ -26,8 +26,15 @@
 
     function scheduleEnforce() { setTimeout(enforceBurger, 0); }
 
-    // Run after initial module script executes
-    window.addEventListener('load', scheduleEnforce, { once: true });
+    // Run after initial module script executes and after fonts are ready
+    function runAfterFonts() {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(scheduleEnforce).catch(scheduleEnforce);
+      } else {
+        scheduleEnforce();
+      }
+    }
+    window.addEventListener('load', runAfterFonts, { once: true });
     window.addEventListener('resize', scheduleEnforce);
     if (screen.orientation && screen.orientation.addEventListener) {
       screen.orientation.addEventListener('change', scheduleEnforce);
