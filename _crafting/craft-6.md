@@ -1,32 +1,34 @@
 ---
-title: "Quantum Periodicity & Quantum Machine Learning"
-excerpt: "Qiskit implementations and report on periodicity detection and QML.<br/><img src='/images/crafts/particule.png'>"
+title: "Mosquito Dynamics & Epidemic Risk Modeling"
+excerpt: "Vector population models and risk maps for epidemiology.<br/><img src='/images/crafts/epidemies.png'>"
 collection: crafting
-teaser: crafts/quantum-computer.png
-contribution: "Bridges theory to practice: oracles, inverse QFT circuits, and a QML survey with hybrid proposals."
-subtitle: "quantum · QML"
-tags: [quantum computing, qiskit, theory, machine learning]
+teaser: crafts/epidemies.png
+contribution: "Combines differential/agent‑based models with parameter inference to map R₀ and risk over time."
+subtitle: "epidemiology · modeling"
+tags: [epidemiology, modeling, inference, public health]
 ---
 
-### Purpose
-Make quantum periodicity and QML concrete via executable circuits and a concise research report.
+### Context
+Vector‑borne disease risk varies with climate and habitat; field counts and cases are sparse and uncertain.
 
-### Targets
-- Implement periodicity detection with explicit oracle design and inverse QFT.
-- Summarize QML optimization methods and outline a hybrid classical‑quantum scheme.
+### Goal
+Forecast vector abundance and epidemic potential with transparent, data‑informed models.
 
-### Design
+### Modeling stack
+- SEI‑style compartments for vectors and hosts; optional agent‑based extensions for hotspots.
+- Bayesian parameter inference with priors on temperature/rainfall response; posterior predictive checks.
+
 ```text
-Oracle f(x) with period r ─► QFT-based circuit ─► measurement ─► post‑processing to infer r
+Env covariates ─► rate functions ─► SEI compartments ─► R₀, risk maps
+                                 └► agent hotspots (optional)
 ```
 
-### Notebook contents
-- Oracle construction, circuit diagrams, and statevector visualizations.
-- Experiments with noise models and small‑device constraints.
+### Data & validation
+- Merge entomological surveys, weather reanalysis, and reported cases.
+- Calibrate on historical windows; test on hold‑outs and new seasons; quantify uncertainty.
 
-### Report highlights
-- Survey of gradient‑based, annealing, and quantum gradient descent approaches; complexity and practicality.
-- Proposal for a hybrid loop with classical preconditioning and quantum fine‑tuning.
+### Results
+- Weekly risk maps with credible intervals; sensitivity shows temperature/rainfall as leading drivers.
 
-### Takeaways
-- Clear didactic artifacts and a roadmap for small‑scale QML experiments.
+### Deliverables
+- Reproducible notebooks, map visualizations, and comparison against baseline statistical models.
