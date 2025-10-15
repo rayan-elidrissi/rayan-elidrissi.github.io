@@ -34,8 +34,10 @@
     /* Policy: on mobile we delegate layout to the dropdown only */
     .masthead .greedy-nav .visible-links { display: none !important; }
     .masthead .greedy-nav .hidden-links.hidden { display: none; } /* default closed */
-    .masthead .greedy-nav button { display: block; margin-left: auto; }
-    .masthead .greedy-nav button.hidden { display: block !important; }
+    .masthead .greedy-nav button { display: block; margin-left: auto; visibility: visible; }
+    /* Greedy-nav toggles a utility .hidden class that sets BOTH display:none and visibility:hidden.
+       We must override both, or the button remains invisible even if display is forced. */
+    .masthead .greedy-nav button.hidden { display: block !important; visibility: visible !important; }
   }
 </style>
 
