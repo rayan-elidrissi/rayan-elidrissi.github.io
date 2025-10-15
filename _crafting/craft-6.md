@@ -2,7 +2,7 @@
 title: "Mosquito Dynamics & Epidemic Risk Modeling"
 excerpt: "Vector population models and risk maps for epidemiology.<br/><img src='/images/crafts/epidemies.png'>"
 collection: crafting
-teaser: crafts/epidemies.png
+teaser: crafts/forest.png
 contribution: "Combines differential/agent‑based models with parameter inference to map R₀ and risk over time."
 subtitle: "epidemiology · modeling"
 tags: [epidemiology, modeling, inference, public health]
