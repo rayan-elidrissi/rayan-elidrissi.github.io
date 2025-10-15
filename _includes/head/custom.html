@@ -28,6 +28,12 @@
   /* Ensure only the active tab is bold; override theme's first-child bold */
   .masthead .greedy-nav .visible-links li:first-child { font-weight: inherit; }
   .masthead .greedy-nav .visible-links a.is-active { font-weight: 600; }
+
+  /* Mobile: prevent overlap by hiding inline links and keeping only the burger */
+  @media (max-width: 768px) {
+    .masthead .greedy-nav .visible-links { display: none !important; }
+    .masthead .greedy-nav button { margin-left: auto; }
+  }
 </style>
 
 <!-- end custom head snippets -->
