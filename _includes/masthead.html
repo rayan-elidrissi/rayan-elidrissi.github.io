@@ -27,3 +27,21 @@
     </div>
   </div>
 </div>
+
+<script>
+(function(){
+  try {
+    if (!(window.matchMedia && window.matchMedia('(max-width: 768px)').matches)) return;
+    var nav = document.getElementById('site-nav');
+    if (!nav) return;
+    var v = nav.querySelector('.visible-links');
+    var h = nav.querySelector('.hidden-links');
+    var btn = nav.querySelector('button');
+    if (!v || !h || !btn) return;
+    while (v.firstElementChild) { h.insertBefore(v.lastElementChild, h.firstChild); }
+    btn.classList.remove('hidden');
+    btn.setAttribute('count', h.children.length);
+    h.classList.add('hidden');
+  } catch(e) { /* no-op */ }
+})();
+</script>
