@@ -7,17 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-I’m a **research intern at Mines Paris - PSL University**, at the **Center for Robotics**. Primarily, my background is in computer vision, now working into <span className="text-foreground">vision‑language action models</span> that capture and interpret **human gestures, tools, and know-how**.
+I’m a **research intern at Mines Paris - PSL University**, within the Center for Robotics, and an M.Eng student in Data Science & AI at ESILV Paris.
 
-My research explores how we can bridge **perception, language, and action** to enable systems that efficiently collaborate with humans. I’m particularly focused on:
+My background is in optimization and computer vision, currently expanding into vision-language-action models that link perception, reasoning, and interaction.
 
-- **Embodied Intelligence**, enabling machines to perceive and act meaningfully in the physical world.  
-- **Adaptive Interfaces**, designing systems that learn from and evolve with human behavior.  
-- **Cognitive Augmentation**, extending human capability through intelligent, context-aware tools.  
-- **Human–AI Collaboration**, developing models that support creativity, learning, and expertise transfer.
+My research explores how we can integrate perception, language, and decision-making to build systems that understand and collaborate with humans across diverse contexts, from robotics to data-driven modeling.
+I’m particularly interested in:
+
+- Embodied & Interactive Intelligence: connecting sensory input with purposeful action.
+- Multimodal Learning & Representation: aligning vision, language, and structured data for adaptive behavior.
+- Human-AI Collaboration: developing models that augment human creativity, expertise, and situational awareness.
+- Optimization: designing and implementing mathematical and algorithmic strategies to improve decision-making and resource allocation in complex, real-world systems.
 
 
 My Vision
 ------
-My work is about **amplifying human skills**, to make our tools extensions of our mind and hands.
+My work is about **extending human capability**, to make our tools extensions of our mind and hands.
 A kind of intelligence that helps us preserve what makes us unique, and pushes us to imagine what’s next.
