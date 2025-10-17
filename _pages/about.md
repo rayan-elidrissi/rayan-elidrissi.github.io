@@ -20,4 +20,4 @@ I’m particularly interested in:
 My Vision
 ------
 My work focuses on **extending human capability**, designing systems that become natural extensions of our minds and hands.
-I aim to develop intelligent systems that collaborate with us: preserving what makes us creative and curious while helping us discover what’s next.
+I aim to develop intelligent systems that collaborate with us: preserving what makes us creative and curious while helping us discover **what’s next**.
