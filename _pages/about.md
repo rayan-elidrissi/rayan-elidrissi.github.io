@@ -13,12 +13,11 @@ My background is in optimization and computer vision, currently expanding into *
 I’m particularly interested in:
 
 - **Human-AI Collaboration**: developing models that augment human creativity, expertise, and situational awareness.
-- **Optimization**: designing and implementing mathematical and algorithmic strategies to improve decision-making and resource allocation in complex, real-world systems.
+- **Optimization**: designing and implementing mathematical and algorithmic strategies to improve decision-making and resource allocation in complex systems.
 - **Multimodal & Embodied Intelligence**: integrating vision, language, and structured data with purposeful action by aligning perception and representation for adaptive, interactive interactions.
 
 
 My Vision
 ------
-My work is about **extending human capability**, to make our tools extensions of our mind and hands.
-A kind of intelligence that helps us preserve what makes us unique, and pushes us to **imagine what’s next**.
-
+My work focuses on **extending human capability**, designing systems that become natural extensions of our minds and hands.
+I aim to develop intelligent systems that collaborate with us: preserving what makes us creative and curious while helping us discover what’s next.
