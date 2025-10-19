@@ -9,7 +9,7 @@ redirect_from:
 
 I’m a **research intern at Mines Paris - PSL University**, within the Center for Robotics, and an M. Eng student in Data Science & AI at ESILV Paris.
 
-My background is in optimization (e.g., energy supply, IoT networks, GPU computing) and computer vision (e.g., image analysis, pattern recognition), currently expanding into *vision-language-action* models to investigate how we can integrate **perception**, **reasoning**, and **actions** to design systems that assist and collaborate with humans across diverse domains, from robotics to data-driven modeling.
+My background is in optimization (e.g., energy supply, IoT networks, GPU computing) and computer vision (e.g., segmantation, scene understanding), currently expanding into *vision-language-action* models to investigate how we can integrate **perception**, **reasoning**, and **actions** to design systems that assist and collaborate with humans across diverse domains, from robotics to data-driven modeling.
 I’m particularly interested in:
 
 - **Human-AI Collaboration**: developing models that augment human creativity, expertise, and situational awareness.
