@@ -5,44 +5,43 @@ permalink: /initiatives/
 author_profile: true
 ---
 
-*Selected projects and experiences bridging tech sprints, mentorship, and innovation.*
+*Building human-centric, data-aligned systems across robotics, infrastructure, and decentralized technologies.*
 
 ---
 
-## 🔹 Tech Sprints & Impact
+## 🔹 Research-Driven System Building
 
- **IBM × De Vinci Hackathon (Organizer & Jury)**  
-Designed and led a 48-hour AI challenge on the IBM WatsonX platform, involving over 200 graduate students. Supervised the evaluation process and served on the jury; partnered with IBM researchers for mentorship and technical guidance.
+I design and prototype AI systems where **data integrity, distribution shift, and human intervention** are first-order constraints.
 
- **Google Healthcare & Life Sciences Hackathon**  
-Built an AI tool to streamline healthcare workflows, collaborating with professionals from the health tech sector.
+**Zero-Trust Data Infrastructure for Web3 (🥇 1st Place — Sui Foundation Hackathon)**  
+Built **SIRIUS**, a Git-like, zero-trust data layer that verifies and versions sensitive data *before* it is written on-chain.  
+Reframed blockchain reliability as a **data provenance problem**, not a consensus one.  
+Built on Seal, Walrus, Nautilus, and Sui.
 
- **Doctolib AI Action Summit Hackathon (Climate Track)**  
-Developed a decision-making framework to optimize datacenter placement for energy efficiency and sustainability to contribute to environmental responsibility in tech infrastructure.
+**Human-in-the-Loop Robotics (🥉 AMD × Hugging Face Open Robotics Hackathon — STATION F)**  
+Built an assistive robotic system that observes human tasks (e.g. assembly, surgery), predicts the next required tool, and delivers it just-in-time.  
+Key insight: end-to-end VLA policies collapse under small distribution shifts; separating **intent (VLMs)** from **execution (imitation-learned skills)** scales better and fails safer.
 
----
+**AI Decision Systems for Healthcare & Climate**  
+Built AI tools for clinical workflow optimization (Google Healthcare & Life Sciences Hackathon) and energy-aware datacenter placement (Doctolib AI Action Summit).  
+Focused on decision support under uncertainty, not automation.
 
-## 🔹 Community & Leadership
+## 🔹 Bring People to Learn Together
 
- **Kryptosphere De Vinci - AI Lead**  
-Mentored 100+ students through workshops and research projects.
-Built partnerships with industry experts and helped structure the AI curriculum for incoming members.
+I design **learning environments as systems**: where peers, experts, and constraints accelerate understanding.
 
- **Shipping Coffee - Co-Organizer**  
-Co-organized weekly creative meetups bringing students and engineers together to prototype, code, and ship small projects in one evening.
+**Fellow — Unaite**  
+Selected as a fellow within a national ecosystem uniting top 7 French universities.  
+Mission: connect the very best students, researchers, and entrepreneurs through curated events.
 
- **De Vinci Partners - Treasurer**  
-Managed annual budget and coordinated my university's largest tech career fair, welcoming over 10,000 visitors.
+**AI & Research Lead — DeVinci Blockchain**  
+Mentored 100+ students through workshops and applied research projects.  
+Structured the AI curriculum and facilitated exchanges between students and labs in decentralization research.
 
----
+**Organizer & Jury — IBM × De Vinci Hackathon**  
+Designed a 48-hour sprint in collaboration with IBM researchers & solution architects for 200 attendees.
 
-## 🔹 Entrepreneurship & Innovation
+**Co-Organizer — Shipping Coffee**  
+Weekly build sessions where students and engineers prototype and ship complete systems in one evening.  
+Bias toward execution, fast feedback, and public learning.
 
- **Data Management SaaS Platform - Founder**  
-Developed and launched a B2B analytics platform for marketing firms, with a focus on data integrity and process automation.
-
- **ETHOxford Hackathon**  
-Co-developed an AI-powered crypto assistant to simplify investing, integrating automation and user-friendly access.
-
- **Speedwins Lovable × Unaite Hackathon**  
-Built an MVP enabling companies to automate content generation tailored to specific audiences through NLP-based pipelines.
