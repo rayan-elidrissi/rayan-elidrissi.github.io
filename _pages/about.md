@@ -7,14 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-I’m a **affiliated researcher at Mines Paris - PSL University**, within the Center for Robotics, and an M. Eng student in Data Science & AI at ESILV Paris.
+I’m an **affiliated researcher at Mines Paris - PSL University**, within the Center for Robotics, and an M. Eng student in Data Science & AI at ESILV Paris.
 
-My background is in optimization (e.g., energy supply, IoT networks, GPU computing) and computer vision (e.g., segmantation, scene understanding), currently expanding into *vision-language-action* models to investigate how we can integrate **perception**, **reasoning**, and **actions** to design systems that assist and collaborate with humans across diverse domains, from robotics to data-driven modeling.
+My background is in optimization (e.g., energy supply, IoT networks, GPU computing) and computer vision (e.g., segmentation, scene understanding).
+Currently, I am expanding my focus to vision-language-action models, exploring how to integrate perception, reasoning, and action. My goal is to design systems that assist and collaborate with humans across domains, from robotics to data-driven modeling.
+
 I’m particularly interested in:
-
-- **Human-AI Collaboration**: developing models that augment human creativity, expertise, and situational awareness.
-- **Optimization**: designing and implementing mathematical and algorithmic strategies to improve decision-making and resource allocation in complex systems.
-- **Multimodal & Embodied Intelligence**: integrating vision, language, and structured data with purposeful action by aligning perception and representation for adaptive, interactive interactions.
+- **Human-AI Collaboration**: Developing models that augment human creativity, expertise, and situational awareness.
+- **Optimization**: Designing and implementing mathematical and algorithmic strategies to improve decision-making and resource allocation in complex systems.
+- **Multimodal & Embodied Intelligence**: Integrating vision, language, and structured data with purposeful action by aligning perception and representation for adaptive, interactive interactions.
 
 
 My Vision
