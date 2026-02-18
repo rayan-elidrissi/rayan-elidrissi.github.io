@@ -30,7 +30,7 @@ Designed AI tools for decision support under uncertainty, not full automation.
 ## 🔹 Learning Ecosystems & Community Leadership
 
 **ITERATE · UNAITE · ESRA**  
-Fellow and board memeber in national and European innovation ecosystems, connecting top students / researchers / startups / VCs through events such as hackathons or paper clubs. Mentored early-stage founders, ran sessions with industry leaders (Perplexity, YC, Meta, Mistral AI, IBM), and used real ventures as testbeds for collaboration between humans, models, and capital.
+Fellow and board member in national and European innovation ecosystems, connecting top students / researchers / startups / VCs through events such as hackathons or paper clubs. Mentored early-stage founders, ran sessions with industry leaders (Perplexity, YC, Meta, Mistral AI, IBM), and used real ventures as testbeds for collaboration between humans, models, and capital.
 
 **Head of AI, DeVinci Blockchain**  
 Mentored 100+ students; designed AI curriculum and facilitated collaboration with academic labs in decentralization.
