@@ -1,0 +1,23 @@
+---
+layout: archive
+title: "Teaching"
+permalink: /teaching/
+author_profile: true
+---
+
+{% include base_path %}
+
+<style>
+  /* Increase vertical spacing between teaching items on this page */
+  .list__item { margin-bottom: 2.25rem; }
+  .archive__item { margin-bottom: 0; }
+  /* Remove space below the page title */
+  .archive > .page__title { margin-bottom: 0; }
+</style>
+
+<p><em>When not training neural networks, I’m often training humans to think like one: critically, creatively, and with purpose.</em></p>
+<hr/>
+
+{% for post in site.teaching reversed %}
+  {% include archive-single.html %}
+{% endfor %}

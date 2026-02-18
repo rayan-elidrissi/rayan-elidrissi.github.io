@@ -1,0 +1,38 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<!-- Support for Academicons -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+<!-- favicon links intentionally removed to allow browser default icon -->
+<meta name="theme-color" content="#ffffff"/>
+
+<style>
+  /* Navbar hover: darker text for all items */
+  .masthead .greedy-nav .visible-links a:hover {
+    color: var(--global-masthead-link-color-hover, #222);
+  }
+
+  /* Navbar active: rectangle under the active item (all tabs) */
+  .masthead .greedy-nav .visible-links a { position: relative; text-decoration: none; }
+  .masthead .greedy-nav .visible-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 4px; background: transparent; }
+  .masthead .greedy-nav .visible-links a.is-active::after { background: #333; }
+
+  /* Ensure only the active tab is bold; override theme's first-child bold */
+  .masthead .greedy-nav .visible-links li:first-child { font-weight: inherit; }
+  .masthead .greedy-nav .visible-links a.is-active { font-weight: 600; }
+
+  /* Mobile: prevent overlap by hiding inline links and keeping only the burger */
+  @media (max-width: 768px) {
+    /* Policy: on mobile we delegate layout to the dropdown only */
+    .masthead .greedy-nav .visible-links { display: none !important; }
+    .masthead .greedy-nav .hidden-links.hidden { display: none; } /* default closed */
+    .masthead .greedy-nav button { display: block; margin-left: auto; visibility: visible; }
+    /* Greedy-nav toggles a utility .hidden class that sets BOTH display:none and visibility:hidden.
+       We must override both, or the button remains invisible even if display is forced. */
+    .masthead .greedy-nav button.hidden { display: block !important; visibility: visible !important; }
+  }
+</style>
+
+<!-- end custom head snippets -->

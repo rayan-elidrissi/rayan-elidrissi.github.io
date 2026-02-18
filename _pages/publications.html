@@ -1,0 +1,36 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<!-- {% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %} -->
+
+{% include base_path %}
+
+<style>
+  /* Increase vertical spacing between publication items on this page */
+  .list__item { margin-bottom: 2.25rem; }
+  .archive__item { margin-bottom: 0; }
+  .archive__item-titleline, .archive__item-authors, .archive__item-venue { margin: 0; }
+  /* Add space between page title and first publication */
+  .archive > .page__title { margin-bottom: 2rem; }
+
+  /* One-row publication layout */
+  .pub-row { display: flex; align-items: stretch; gap: 1.25rem; }
+  .pub-text { flex: 1 1 auto; min-width: 0; }
+  .pub-img { flex: 0 0 420px; max-width: 420px; display: flex; }
+  .pub-img img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 6px; }
+
+  /* prevent any float overlaps (legacy) */
+  .archive__item:after { content: ""; display: block; clear: both; }
+
+  /* remove any page-specific navbar underline overrides */
+</style>
+{% assign pubs = site.publications | sort: 'date' | reverse %}
+{% for post in pubs %}
+  {% include archive-single.html show_teaser=forloop.first %}
+{% endfor %}

@@ -1,0 +1,79 @@
+<!-- start custom footer snippets -->
+
+ 
+
+<!-- Support for MatJax -->
+<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+
+<!-- Support for Plotly -->
+<script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js'></script>
+
+<!-- Support for Mermaid -->
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad:true, theme:'default'});
+    await mermaid.run({querySelector:'code.language-mermaid'});
+</script>
+
+<!-- end custom footer snippets -->
+
+<script>
+  (function() {
+    function moveAllToHamburger() {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      var btn = nav.querySelector('button');
+      var vlinks = nav.querySelector('.visible-links');
+      var hlinks = nav.querySelector('.hidden-links');
+      if (!btn || !vlinks || !hlinks) return;
+
+      // Move every visible item into the hidden list
+      while (vlinks.firstElementChild) {
+        hlinks.insertBefore(vlinks.lastElementChild, hlinks.firstChild);
+      }
+      btn.classList.remove('hidden');
+      btn.setAttribute('count', hlinks.children.length);
+      hlinks.classList.add('hidden');
+      if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
+    }
+
+    function restoreFromHamburger() {
+      var nav = document.getElementById('site-nav');
+      if (!nav) return;
+      var vlinks = nav.querySelector('.visible-links');
+      var hlinks = nav.querySelector('.hidden-links');
+      if (!vlinks || !hlinks) return;
+      while (hlinks.firstElementChild) {
+        vlinks.appendChild(hlinks.firstElementChild);
+      }
+      if (window.breaks && Array.isArray(window.breaks)) { window.breaks = []; }
+    }
+
+    function isMobile() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    // Patch greedy-nav's updateNav after scripts load
+    window.addEventListener('load', function() {
+      var original = window.updateNav;
+      window.updateNav = function() {
+        if (isMobile()) {
+          moveAllToHamburger();
+          return; // prevent greedy logic from pulling items back out
+        }
+        restoreFromHamburger();
+        if (typeof original === 'function') {
+          original();
+        }
+      };
+
+      // Run once immediately and then on resize/orientation
+      window.updateNav();
+      window.addEventListener('resize', window.updateNav);
+      if (screen.orientation && screen.orientation.addEventListener) {
+        screen.orientation.addEventListener('change', window.updateNav);
+      }
+    });
+  })();
+</script>
