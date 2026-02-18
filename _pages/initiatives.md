@@ -29,7 +29,7 @@ Designed AI tools for decision support under uncertainty, not full automation.
 
 ## 🔹 Learning Ecosystems & Community Leadership
 
-**ITERATE · UNAITE · ESRA**  
+**Iterate · Unaite · ESRA**  
 Fellow and board member in national and European innovation ecosystems, connecting top students / researchers / startups / VCs through events such as hackathons or paper clubs. Mentored early-stage founders, ran sessions with industry leaders (Perplexity, YC, Meta, Mistral AI, IBM), and used real ventures as testbeds for collaboration between humans, models, and capital.
 
 **Head of AI, DeVinci Blockchain**  
