@@ -14,7 +14,7 @@ author_profile: true
 **Zero-Trust Data Infrastructure for Web3**  | Sui Foundation Hackathon
 Built SIRIUS, a Git-like, zero-trust data layer that verifies and versions sensitive data before writing on-chain. Enabled verifiable history, controlled updates, and auditability for sensitive datasets.  
 
-**Human-in-the-Loop Robotics** | AMD × Hugging Face Open Robotics Hackathon, STATION F  
+**Human-in-the-Loop Robotics** | AMD × Hugging Face Open Robotics Hackathon, at STATION F  
 Developed an assistive robotic system that observes human tasks (assembly, surgery, maintenance), then predicts the next required tool, and delivers it just-in-time. Focused on robustness under distribution shift by separating intent (VLMs) from execution (imitation-learned skills): scaling better, generalizing further, and failing safer than end-to-end VLA policies.
 
 **AI Decision Systems for Healthcare & Climate** | Google Healthcare & Life Sciences Hackathon and Doctolib AI Action Summit
