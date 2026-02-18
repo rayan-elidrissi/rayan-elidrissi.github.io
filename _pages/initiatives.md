@@ -9,25 +9,21 @@ author_profile: true
 
 ---
 
-## 🔹 Building & Shipping Products
+## 🔹 Building & Shipping
 
-**Zero-Trust Data Infrastructure for Web3**  
-🥇 Sui Foundation Hackathon  
+**Zero-Trust Data Infrastructure for Web3**  | 🥇 Sui Foundation Hackathon
 Built SIRIUS, a Git-like, zero-trust data layer that verifies and versions sensitive data before writing on-chain. Enabled verifiable history, controlled updates, and auditability for sensitive datasets.  
 
-**Human-in-the-Loop Robotics**  
-🥉 AMD × Hugging Face Open Robotics Hackathon, STATION F  
+**Human-in-the-Loop Robotics** | 🥉 AMD × Hugging Face Open Robotics Hackathon, STATION F  
 Developed an assistive robotic system that observes human tasks (assembly, surgery, maintenance), predicts the next required tool, and delivers it just-in-time.  
 Focused on robustness under distribution shift by separating intent (VLMs) from execution (imitation-learned skills): scaling better, generalizing further, and failing safer than end-to-end VLA policies.
 
-**AI Decision Systems for Healthcare & Climate**  
-Designed AI tools for decision support under uncertainty, not full automation.  
-- Clinical workflow design (Google Healthcare & Life Sciences Hackathon)  
-- Energy-aware datacenter placement (Doctolib AI Action Summit)
+**AI Decision Systems for Healthcare & Climate** | Google Healthcare & Life Sciences Hackathon and Doctolib AI Action Summit
+Designed AI tools for decision support under uncertainty, not full automation. Whether in clinical workflow design or in energy-aware datacenter placement.
 
 ---
 
-## 🔹 Learning Ecosystems & Community Leadership
+## 🔹 Learning Ecosystems & Communities
 
 **Iterate · Unaite · ESRA**  
 Fellow and board member in national and European innovation ecosystems, connecting top students / researchers / startups / VCs through events such as hackathons or paper clubs. Mentored early-stage founders, ran sessions with industry leaders (Perplexity, YC, Meta, Mistral AI, IBM), and used real ventures as testbeds for collaboration between humans, models, and capital.
